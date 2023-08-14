@@ -4,9 +4,9 @@ import icon3 from "../../assets/solar_copy-linear.png";
 import icon4 from "../../assets/uiw_down.png";
 import image3 from "../../assets/image 3.png";
 import image21 from "../../assets/image 21.png";
-import blogIcon1 from '../../assets/image 28-2.png'
-import blogIcon2 from '../../assets/image 29-2.png'
-import blogIcon3 from '../../assets/image 30-2.png'
+import blogIcon1 from "../../assets/image 28-2.png";
+import blogIcon2 from "../../assets/image 29-2.png";
+import blogIcon3 from "../../assets/image 30-2.png";
 
 const index = () => {
   return (
@@ -414,8 +414,8 @@ const index = () => {
         </div>
       </div>
 
-      <div className=" flex flex-col gap-8 bg-white p-10 rounded-2xl">
-        <div className="flex flex-row justify-between">
+      <div className=" flex flex-col gap-3 bg-white rounded-2xl">
+        <div className="flex flex-row justify-between p-10">
           <h1 className=" text-2xl font-bold">Blog</h1>
           <div className="flex flex-row gap-10">
             <img src={icon1} alt="" className="w-[100%] h-[80%]" />
@@ -425,7 +425,58 @@ const index = () => {
           </div>
         </div>
 
-        
+        <div className="flex flex-col gap-3">
+          <div className="flex flex-row gap-3 px-10 text-lg">
+            <img src={blogIcon1} alt="" className=" w-[12%]" />
+            <div className="flex flex-col">
+              <h3 className="font-bold">Blog Search</h3>
+              <p className=" text-gray-500">Blogsearch.com</p>
+            </div>
+          </div>
+          <hr />
+          <div className="flex flex-row gap-3 px-10 text-lg">
+            <img src={blogIcon1} alt="" className=" w-[12%]" />
+            <div className="flex flex-col">
+              <h3 className="font-bold">Blog Search</h3>
+              <p className=" text-gray-500">Blogsearch.com</p>
+            </div>
+          </div>
+          <hr />
+          <div className="flex flex-row gap-3 px-10 text-lg pb-6">
+            <img src={blogIcon1} alt="" className=" w-[12%]" />
+            <div className="flex flex-col">
+              <h3 className="font-bold">Blog Search</h3>
+              <p className=" text-gray-500">Blogsearch.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className=" flex flex-col bg-white rounded-2xl p-10 gap-7">
+        <div className="flex flex-row justify-between ">
+          <h1 className=" text-2xl font-bold">Cashback</h1>
+          <div className="flex flex-row gap-10">
+            <img src={icon1} alt="" className="w-[100%] h-[80%]" />
+            <img src={icon2} alt="" className="w-[100%] h-[80%]" />
+            <img src={icon3} alt="" className="w-[100%] h-[80%]" />
+            <img src={icon4} alt="" className="w-[100%] h-[80%]" />
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-5">
+          <ul className="flex flex-row gap-7">
+            <li>
+              <a href="#" className="text-red-500 border border-b-4 border-b-red-500">Notiz</a>
+            </li>
+            <li>
+              <a href="#">Neue Notiz</a>
+            </li>
+          </ul>
+
+          <hr />
+
+          <p>Don't forgot</p>
+        </div>
       </div>
     </div>
   );
