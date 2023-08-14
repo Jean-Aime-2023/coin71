@@ -4,6 +4,7 @@ import brand1 from '../../assets/image 4.png'
 import brand2 from '../../assets/image 6.png'
 import brand3 from '../../assets/image 9.png'
 import brand4 from '../../assets/image 11.png'
+import searchIcon from '../../assets/ri_search-2-line.png'
 
 
 const index = () => {
@@ -14,6 +15,7 @@ const index = () => {
         </div> */}
         <div className='max-w-[1240px] mx-auto items-center flex gap-[50rem]'>
            <input type="text" name="seach" id="search" placeholder='search' className='p-4 rounded-full w-[40rem] outline-none'/>
+           <img src={searchIcon} alt="" className='absolute left-[64%]'/>
         </div>
         <div className='flex flex-row gap-8'>
             <div className='bg-white h-[100%] p-2 rounded-xl'>
