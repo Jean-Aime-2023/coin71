@@ -11,15 +11,15 @@ import group from '../../assets/Group 98.png'
 
 const index = () => {
   return (
-    <div className='  flex flex-col gap-10 items-center'>
+    <div className='flex flex-col gap-10 items-center'>
         <div className='w-full h-[300px] bg-gray-700/90 relative'>
            <img className='w-full h-full object-cover mix-blend-overlay' src={group} alt="" />
         </div>
         <div className='max-w-[1240px] mx-auto items-center flex gap-[50rem] absolute top-[14%]'>
-           <input type="text" name="seach" id="search" placeholder='search' className='p-4 rounded-full w-[40rem] outline-none'/>
+           <input type="text" name="seach" id="search" placeholder='search' className='p-4 rounded-full w-[40rem] outline-none max-sm:w-[30rem]'/>
            <img src={searchIcon} alt="" className='absolute left-[94%]'/>
         </div>
-        <div className='flex flex-row gap-8 absolute top-[25%]'>
+        <div className='flex flex-row gap-8 absolute top-[25%] md:flex-wrap'>
             <div className='bg-white h-[100%] p-2 rounded-xl'>
                <img src={brand1} alt="" className='h-7'/>
                <p className=' text-sm'>Ali Express</p>
@@ -46,8 +46,10 @@ const index = () => {
             </div>
         </div>
 
-        <div className='absolute right-36 top-[14%] '>
-            <img src={logo} alt="logo" /> 
+        <div className='absolute xl:right-36 xl:top-[20%] top-[44%] sm:right-[45%] sm:top-[44%]'>
+            <a href="/home">
+               <img src={logo} alt="" />
+            </a>
         </div>
     </div>
   )
