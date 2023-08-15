@@ -1,5 +1,20 @@
-.background{
-    background-image: url(./assets/Group\ 98.png);
-    background-position: center;
-    background-repeat: no-repeat;
+.background {
+  background-image: url(./assets/Group\ 98.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card1 {
+  background: #fff;
+  backdrop-filter: blur(2px);
+}
+
+.card2 {
+  background: #edffe9;
+  backdrop-filter: blur(2px);
+}
+
+.card3 {
+  background: #ffeed4;
+  backdrop-filter: blur(2px);
 }

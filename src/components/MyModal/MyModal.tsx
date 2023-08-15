@@ -19,8 +19,8 @@ const MyModal = ({ visible, onClose }: ModalToggling) => {
       id="container"
       className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center"
     >
-      <div className="bg-white p-20 rounded-3xl flex flex-col gap-3 h-[90%] w-[90%]">
-        <img src={logo} alt="" className="w-[10%]" />
+      <div className="bg-white p-20 rounded-3xl flex flex-col gap-3 h-[90%] w-[90%] overflow-y-scroll overflow-x-hidden max-md:p-10 max-md:text-xs">
+        <img src={logo} alt="" className="w-[10%] max-lg:w-[30%]" />
         <div className="flex flex-row justify-between">
           <div className="flex flex-col">
             <p>Cookie Lifetime: 30 Days</p>
@@ -34,7 +34,7 @@ const MyModal = ({ visible, onClose }: ModalToggling) => {
           </div>
 
           <div className="flex flex-col">
-            <p className=" text-xl font-semibold pb-2">Cashback 3% to 60%</p>
+            <p className=" text-xl font-semibold pb-2 max-md:text-sm">Cashback 3% to 60%</p>
             <div className="flex flex-row">
               <p>MLM:</p>
               <div>
@@ -47,8 +47,8 @@ const MyModal = ({ visible, onClose }: ModalToggling) => {
         </div>
 
         <div className="flex flex-col gap-8">
-          <p className="w-[100%] text-3xl text-center text-green-600 bg-green-100 rounded-full p-2">20% Amazon Gustcheincode Fur Alles exkl. Technik</p>
-          <div className="flex flex-row justify-between">
+          <p className="w-[100%] text-3xl text-center text-green-600 bg-green-100 rounded-full p-2 md:text-xl max-md:text-lg">20% Amazon Gustcheincode Fur Alles exkl. Technik</p>
+          <div className="flex flex-row lg:justify-between md:flex-wrap md:justify-center max-md:flex-wrap max-md:justify-center ">
             <div className="flex flex-col gap-3">
               <button className="flex flow-row justify-between bg-gray-500 py-3 px-8 rounded-full font-semibold flex-row items-center">
                 Copy<span>Adi2345</span>
@@ -60,12 +60,12 @@ const MyModal = ({ visible, onClose }: ModalToggling) => {
                 </span>
               </button>
             </div>
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 md:items-center md:pt-2 md:justify-center max-md:pt-2 max-md:justify-center">
               <p>
                 Share your link with your friends and earn as if you were
                 shopping yourself. Coin7 makes earning money easy!
               </p>
-              <button className="w-[20%] flex flow-row justify-between bg-gray-200 py-3 px-8 rounded-full font-semibold flex-row items-center">
+              <button className="w-[20%] max-md:ml-20 max-md:w-[40%] flex flow-row justify-between bg-gray-200 py-3 px-8 rounded-full font-semibold flex-row items-center">
                 <span>
                   <img src={shareIcon} alt="" />
                 </span>
@@ -88,7 +88,7 @@ const MyModal = ({ visible, onClose }: ModalToggling) => {
 
             <h1>Manual entry of order data:</h1>
 
-            <div className="flex flex-row justify-between">
+            <div className="flex flex-row justify-between max-md:flex-wrap md:flex-wrap">
                 <div className="flex flex-col gap-3">
                     Date
                     <input type="date" name="Choose Date" id="Choose Date" placeholder="Choose Date" className="border-2 border-gray-300 outline-none p-2 rounded-lg"/>
@@ -106,7 +106,7 @@ const MyModal = ({ visible, onClose }: ModalToggling) => {
                     <input type="text" placeholder="Order" className="border-2 border-gray-300 outline-none p-2 rounded-lg"/>
                 </div>
                 <div>
-                <button className=" bg-slate-500 px-4 rounded-full mt-2 h-[70%]">Go To Order</button>
+                <button className=" bg-slate-500 px-4 rounded-full mt-2 h-[70%] max-md:h-[100%] max-md:mt-2">Go To Order</button>
                 </div>
             </div>
 

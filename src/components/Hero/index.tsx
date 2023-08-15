@@ -1,11 +1,10 @@
-import bgimage from '../../assets/image (1).png'
 import logo from '../../assets/logo 1.png'
 import brand1 from '../../assets/image 4.png'
 import brand2 from '../../assets/image 6.png'
 import brand3 from '../../assets/image 9.png'
-import brand4 from '../../assets/image 11.png'
+import brand4 from '../../assets/image 21.png'
+import brand5 from '../../assets/image 10.png'
 import searchIcon from '../../assets/ri_search-2-line.png'
-// import '../../App.css'
 import group from '../../assets/Group 98.png'
 
 
@@ -20,33 +19,33 @@ const index = () => {
            <img src={searchIcon} alt="" className='absolute left-[94%]'/>
         </div>
         <div className='flex flex-row gap-8 absolute top-[25%] md:flex-wrap'>
-            <div className='bg-white h-[100%] p-2 rounded-xl'>
+        <div className='bg-white h-[100%] p-2 rounded-xl flex flex-col justify-center items-center'>
                <img src={brand1} alt="" className='h-7'/>
                <p className=' text-sm'>Ali Express</p>
             </div>
 
-            <div className='bg-white h-[100%] p-2 rounded-xl'>
-               <img src={brand1} alt="" className='h-7'/>
-               <p className=' text-sm'>Ali Express</p>
+            <div className='bg-white h-[100%] p-2 rounded-xl flex flex-col justify-center items-center'>
+               <img src={brand2} alt="" className='h-7'/>
+               <p className=' text-sm'>Ebay</p>
             </div>
 
-            <div className='bg-white h-[100%] p-2 rounded-xl'>
-               <img src={brand1} alt="" className='h-7'/>
-               <p className=' text-sm'>Ali Express</p>
+            <div className='bg-white h-[100%] p-2 rounded-xl flex flex-col justify-center items-center px-6'>
+               <img src={brand3} alt="" className='h-7'/>
+               <p className=' text-sm'>Apple</p>
             </div>
 
-            <div className='bg-white h-[100%] p-2 rounded-xl'>
-               <img src={brand1} alt="" className='h-7'/>
-               <p className=' text-sm'>Ali Express</p>
+            <div className='bg-white h-[100%] rounded-xl flex flex-col justify-center items-center py-2 px-4'>
+               <img src={brand4} alt="" className='h-7'/>
+               <p className=' text-sm'>Adidas</p>
             </div>
 
-            <div className='bg-white h-[100%] p-2 rounded-xl'>
-               <img src={brand1} alt="" className='h-7'/>
-               <p className=' text-sm'>Ali Express</p>
+            <div className='bg-white h-[100%] p-2 rounded-xl flex flex-col justify-center items-center'>
+               <img src={brand5} alt="" className='h-7'/>
+               <p className=' text-sm'>Alibaba</p>
             </div>
         </div>
 
-        <div className='absolute xl:right-36 xl:top-[20%] top-[44%] sm:right-[45%] sm:top-[44%]'>
+        <div className='absolute xl:right-36 xl:top-[20%] top-[44%] sm:right-[45%] sm:top-[35%] max-sm:top-[35%]'>
             <a href="/home">
                <img src={logo} alt="" />
             </a>

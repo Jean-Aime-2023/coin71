@@ -31,7 +31,7 @@ import page2 from '../../assets/image 29-1.png'
 const index = () => {
   return (
     <div className="flex flex-col gap-6 flex-1">
-      <div className=" flex flex-col gap-3 bg-white rounded-2xl">
+      <div className=" flex flex-col gap-3 card1 rounded-2xl">
         <div className="flex flex-row justify-between p-10">
           <h1 className=" text-2xl font-bold">Bookmarks</h1>
           <div className="flex flex-row gap-10">
@@ -44,23 +44,23 @@ const index = () => {
 
         <div className="grid grid-cols-4">
           <div className="flex flex-col items-center text-center">
-            <img src={icons4} alt="" className="h-[4rem]" />
-            <p>Whatsapp</p>
+            <img src={icons6} alt="" className="h-[4rem]" />
+            <p>Word doc</p>
           </div>
 
           <div className="flex flex-col items-center text-center">
-            <img src={icons4} alt="" className="h-[4rem]" />
-            <p>Whatsapp</p>
+            <img src={icons1} alt="" className="h-[4rem]" />
+            <p>Mircosoft</p>
           </div>
 
           <div className="flex flex-col items-center text-center">
-            <img src={icons4} alt="" className="h-[4rem]" />
-            <p>Whatsapp</p>
+            <img src={icons2} alt="" className="h-[4rem]" />
+            <p>Gmail</p>
           </div>
 
           <div className="flex flex-col items-center text-center">
-            <img src={icons4} alt="" className="h-[4rem]" />
-            <p>Whatsapp</p>
+            <img src={icons3} alt="" className="h-[4rem]" />
+            <p>Chatgpt</p>
           </div>
 
           <div className="flex flex-col items-center text-center">
@@ -69,13 +69,13 @@ const index = () => {
           </div>
 
           <div className="flex flex-col items-center text-center pb-9">
-            <img src={icons4} alt="" className="h-[4rem]" />
-            <p>Whatsapp</p>
+            <img src={icons5} alt="" className="h-[4rem]" />
+            <p>Instagram</p>
           </div>
         </div>
       </div>
 
-      <div className=" flex flex-col gap-3 bg-white rounded-2xl">
+      <div className=" flex flex-col gap-3 card1 rounded-2xl">
         <div className="flex flex-row justify-between p-10">
           <h1 className=" text-2xl font-bold">Apps</h1>
           <div className="flex flex-row gap-10">
@@ -89,27 +89,27 @@ const index = () => {
         <div className="grid grid-cols-4">
         <div className="flex flex-col items-center text-center">
             <img src={app1} alt="" className="h-[4rem]" />
-            <p>Whatsapp</p>
+            <p>Manage My Pain</p>
           </div>
 
           <div className="flex flex-col items-center text-center">
             <img src={app2} alt="" className="h-[4rem]" />
-            <p>Whatsapp</p>
+            <p>Google Assistant</p>
           </div>
 
           <div className="flex flex-col items-center text-center">
             <img src={app3} alt="" className="h-[4rem]" />
-            <p>Whatsapp</p>
+            <p>Google Home</p>
           </div>
 
           <div className="flex flex-col items-center text-center pb-10">
             <img src={app4} alt="" className="h-[4rem]" />
-            <p>Whatsapp</p>
+            <p>Google Calendar</p>
           </div>
         </div>  
       </div>
 
-      <div className=" flex flex-col gap-3 bg-white rounded-2xl">
+      <div className=" flex flex-col gap-3 card2 rounded-2xl">
         <div className="flex flex-row justify-between p-10">
           <h1 className=" text-2xl font-bold">Blog</h1>
           <div className="flex flex-row gap-10">
@@ -124,30 +124,30 @@ const index = () => {
           <div className="flex flex-row gap-3 px-10 text-lg">
             <img src={address1} alt="" className=" w-[12%]" />
             <div className="flex flex-col">
-              <h3 className="font-bold">Blog Search</h3>
-              <p className=" text-gray-500">Blogsearch.com</p>
+              <h3 className="font-bold">Cookpad</h3>
+              <p className=" text-gray-500">cookpad.com</p>
             </div>
           </div>
           <hr />
           <div className="flex flex-row gap-3 px-10 text-lg">
             <img src={address2} alt="" className=" w-[12%]" />
             <div className="flex flex-col">
-              <h3 className="font-bold">Blog Search</h3>
-              <p className=" text-gray-500">Blogsearch.com</p>
+              <h3 className="font-bold">Homes</h3>
+              <p className=" text-gray-500">Homes.com</p>
             </div>
           </div>
           <hr />
           <div className="flex flex-row gap-3 px-10 text-lg pb-6">
-            <img src={address3} alt="" className=" w-[12%]" />
+            <img src={address3} alt="" className=" w-[10%] h-[50%] mt-3" />
             <div className="flex flex-col">
-              <h3 className="font-bold">Blog Search</h3>
-              <p className=" text-gray-500">Blogsearch.com</p>
+              <h3 className="font-bold">Vrbo</h3>
+              <p className=" text-gray-500">vrbo.com</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div className=" flex flex-col gap-3 bg-white rounded-2xl">
+      <div className=" flex flex-col gap-3 card1 rounded-2xl">
         <div className="flex flex-row justify-between p-10">
           <h1 className=" text-2xl font-bold">Apps</h1>
           <div className="flex flex-row gap-10">
@@ -166,22 +166,22 @@ const index = () => {
 
           <div className="flex flex-col items-center text-center">
             <img src={search2} alt="" className="h-[4rem]" />
-            <p>Onion</p>
+            <p>Video Editing Tool</p>
           </div>
 
           <div className="flex flex-col items-center text-center">
             <img src={search3} alt="" className="h-[4rem]" />
-            <p>Onion</p>
+            <p>Riddler.io</p>
           </div>
 
           <div className="flex flex-col items-center text-center pb-10">
             <img src={search4} alt="" className="h-[4rem]" />
-            <p>Onion</p>
+            <p>SEO Extension</p>
           </div>
         </div>  
       </div>
 
-      <div className=" flex flex-col gap-3 bg-white rounded-2xl">
+      <div className=" flex flex-col gap-3 card1 rounded-2xl">
         <div className="flex flex-row justify-between p-10">
           <h1 className=" text-2xl font-bold">Blog</h1>
           <div className="flex flex-row gap-10">
@@ -196,24 +196,24 @@ const index = () => {
           <div className="flex flex-row gap-3 px-10 text-lg">
             <img src={address1} alt="" className=" w-[12%]" />
             <div className="flex flex-col">
-              <h3 className="font-bold">Blog Search</h3>
-              <p className=" text-gray-500">Blogsearch.com</p>
+              <h3 className="font-bold">Android App</h3>
+              <p className=" text-gray-500">github.com/topics/profile-link</p>
             </div>
           </div>
           <hr />
           <div className="flex flex-row gap-3 px-10 text-lg">
             <img src={page1} alt="" className=" w-[12%]" />
             <div className="flex flex-col">
-              <h3 className="font-bold">Blog Search</h3>
-              <p className=" text-gray-500">Blogsearch.com</p>
+              <h3 className="font-bold">Archived today</h3>
+              <p className=" text-gray-500">chaches clear </p>
             </div>
           </div>
           <hr />
           <div className="flex flex-row gap-3 px-10 text-lg pb-6">
             <img src={page2} alt="" className=" w-[12%]" />
             <div className="flex flex-col">
-              <h3 className="font-bold">Blog Search</h3>
-              <p className=" text-gray-500">Blogsearch.com</p>
+              <h3 className="font-bold">Vrbo</h3>
+              <p className=" text-gray-500">vrbo.com</p>
             </div>
           </div>
         </div>
