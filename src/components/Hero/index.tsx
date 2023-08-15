@@ -19,30 +19,30 @@ const index = () => {
            <img src={searchIcon} alt="" className='absolute left-[94%]'/>
         </div>
         <div className='flex flex-row gap-8 absolute top-[25%] md:flex-wrap'>
-        <div className='bg-white h-[100%] p-2 rounded-xl flex flex-col justify-center items-center'>
+            <a href='https://www.aliexpress.com/' target="_blank" className='bg-white h-[100%] p-2 rounded-xl flex flex-col justify-center items-center'>
                <img src={brand1} alt="" className='h-7'/>
                <p className=' text-sm'>Ali Express</p>
-            </div>
+            </a>
 
-            <div className='bg-white h-[100%] p-2 rounded-xl flex flex-col justify-center items-center'>
+            <a href='https://www.ebay.com/' target="_blank" className='bg-white h-[100%] p-2 rounded-xl flex flex-col justify-center items-center'>
                <img src={brand2} alt="" className='h-7'/>
                <p className=' text-sm'>Ebay</p>
-            </div>
+            </a>
 
-            <div className='bg-white h-[100%] p-2 rounded-xl flex flex-col justify-center items-center px-6'>
+            <a href='https://www.apple.com/' target="_blank" className='bg-white h-[100%] p-2 rounded-xl flex flex-col justify-center items-center px-6'>
                <img src={brand3} alt="" className='h-7'/>
                <p className=' text-sm'>Apple</p>
-            </div>
+            </a>
 
-            <div className='bg-white h-[100%] rounded-xl flex flex-col justify-center items-center py-2 px-4'>
+            <a href='https://www.adidas.com/us' target="_blank" className='bg-white h-[100%] rounded-xl flex flex-col justify-center items-center py-2 px-4'>
                <img src={brand4} alt="" className='h-7'/>
                <p className=' text-sm'>Adidas</p>
-            </div>
+            </a>
 
-            <div className='bg-white h-[100%] p-2 rounded-xl flex flex-col justify-center items-center'>
+            <a href='https://www.alibaba.com/' target="_blank" className='bg-white h-[100%] p-2 rounded-xl flex flex-col justify-center items-center'>
                <img src={brand5} alt="" className='h-7'/>
                <p className=' text-sm'>Alibaba</p>
-            </div>
+            </a>
         </div>
 
         <div className='absolute xl:right-36 xl:top-[20%] top-[44%] sm:right-[45%] sm:top-[35%] max-sm:top-[35%]'>

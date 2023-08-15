@@ -26,7 +26,7 @@ const index = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-5">
+        <a href="https://weather.com/" target="_blank" className="grid grid-cols-5">
           <div className="flex flex-col items-center text-center">
             <p>Sunday</p>
             <img src={icons2} alt="" className="h-[4rem]" />
@@ -56,7 +56,7 @@ const index = () => {
             <img src={icons2} alt="" className="h-[4rem]" />
             <p>20C</p>
           </div>
-        </div>
+        </a>
       </div>
 
       <div className=" flex flex-col gap-3 card3 rounded-2xl">
@@ -103,9 +103,9 @@ const index = () => {
           </div>
         </div>
 
-        <div>
+        <a href="https://contoso.sharepoint.com/sites/Mark8ProjectTeam/Shared%20Documents/Go%20to%20Market%20Plan/LiveCaptions.gif" target="_blank">
           <img src={chart} alt="" className="w-[100%]" />
-        </div>
+        </a>
       </div>
 
       <div className=" flex flex-col gap-3 card1 rounded-3xl">
@@ -120,36 +120,36 @@ const index = () => {
         </div>
 
         <div className="flex flex-col gap-4 px-10">
-          <div className="flex flex-row gap-3">
-            <img src={people} alt="" />
+          <a href="https://news.microsoft.com/" target="_blank" className="flex flex-row gap-3">
+            <img src={people} alt=""/>
             <div className="flex flex-col">
-              <h3 className="font-bold text-2xl">Joe Alwyn 'a new man' after Taylor Swift split</h3>
-              <p className="text-lg">
+              <h3 className="font-bold text-xl">Joe Alwyn 'a new man' after Taylor Swift split</h3>
+              <p className="text-sm">
                 Joe Alwyn reportedly focused his post-Taylor Swift-breakup
                 energy into developing himself
               </p>
             </div>
-          </div>
+          </a>
 
-          <div className="flex flex-row gap-3">
+          <a href="https://news.microsoft.com/" target="_blank" className="flex flex-row gap-3">
             <img src={people1} alt="" />
             <div className="flex flex-col">
-              <h3 className="font-bold text-2xl">Tory Lanez 'refuses to be eliminated</h3>
-              <p className="text-lg">
+              <h3 className="font-bold text-xl">Tory Lanez 'refuses to be eliminated</h3>
+              <p className="text-sm">
               fter 10-year sentence over Megan Thee Stallion shooting
               </p>
             </div>
-          </div>
+          </a>
 
-          <div className="flex flex-row gap-3 pb-10">
+          <a href="https://news.microsoft.com/" target="_blank" className="flex flex-row gap-3 pb-10">
             <img src={peopl2} alt="" />
             <div className="flex flex-col">
-              <h3 className="font-bold text-2xl">Shania Twain feels for Céline Dion</h3>
-              <p className="text-lg">
+              <h3 className="font-bold text-xl">Shania Twain feels for Céline Dion</h3>
+              <p className="text-sm">
               after Stiff person diagnosis: ‘Gotta be so difficult’
               </p>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>

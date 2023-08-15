@@ -43,35 +43,35 @@ const index = () => {
         </div>
 
         <div className="grid grid-cols-4">
-          <div className="flex flex-col items-center text-center">
+          <a href="https://www.microsoft.com/en-us/microsoft-365/word" target="_blank" className="flex flex-col items-center text-center">
             <img src={icons6} alt="" className="h-[4rem]" />
             <p>Word doc</p>
-          </div>
+          </a>
 
-          <div className="flex flex-col items-center text-center">
+          <a href="https://www.microsoft.com/en-us/?ql=2" target="_blank" className="flex flex-col items-center text-center">
             <img src={icons1} alt="" className="h-[4rem]" />
             <p>Mircosoft</p>
-          </div>
+          </a>
 
-          <div className="flex flex-col items-center text-center">
+          <a href="https://www.gmail.com/" target="_blank" className="flex flex-col items-center text-center">
             <img src={icons2} alt="" className="h-[4rem]" />
             <p>Gmail</p>
-          </div>
+          </a>
 
-          <div className="flex flex-col items-center text-center">
+          <a href="https://chat.openai.com/" target="_blank" className="flex flex-col items-center text-center">
             <img src={icons3} alt="" className="h-[4rem]" />
             <p>Chatgpt</p>
-          </div>
+          </a>
 
-          <div className="flex flex-col items-center text-center">
+          <a href="https://www.whatsapp.com/" target="_blank" className="flex flex-col items-center text-center">
             <img src={icons4} alt="" className="h-[4rem]" />
             <p>Whatsapp</p>
-          </div>
+          </a>
 
-          <div className="flex flex-col items-center text-center pb-9">
+          <a href="https://www.instagram.com/" target="_blank" className="flex flex-col items-center text-center pb-9">
             <img src={icons5} alt="" className="h-[4rem]" />
             <p>Instagram</p>
-          </div>
+          </a>
         </div>
       </div>
 
@@ -87,25 +87,25 @@ const index = () => {
         </div>
 
         <div className="grid grid-cols-4">
-        <div className="flex flex-col items-center text-center">
+        <a href="https://www.managemypain.net/" target="_blank" className="flex flex-col items-center text-center">
             <img src={app1} alt="" className="h-[4rem]" />
             <p>Manage My Pain</p>
-          </div>
+          </a>
 
-          <div className="flex flex-col items-center text-center">
+          <a href="https://assistant.google.com/" target="_blank" className="flex flex-col items-center text-center">
             <img src={app2} alt="" className="h-[4rem]" />
             <p>Google Assistant</p>
-          </div>
+          </a>
 
-          <div className="flex flex-col items-center text-center">
+          <a href="https://home.google.com/welcome/" target="_blank" className="flex flex-col items-center text-center">
             <img src={app3} alt="" className="h-[4rem]" />
             <p>Google Home</p>
-          </div>
+          </a>
 
-          <div className="flex flex-col items-center text-center pb-10">
+          <a href="https://workspace.google.com/" target="_blank" className="flex flex-col items-center text-center pb-10">
             <img src={app4} alt="" className="h-[4rem]" />
             <p>Google Calendar</p>
-          </div>
+          </a>
         </div>  
       </div>
 
@@ -121,29 +121,29 @@ const index = () => {
         </div>
 
         <div className="flex flex-col gap-3 pb-10">
-          <div className="flex flex-row gap-3 px-10 text-lg">
+          <a href="cookpad.com" target="_blank" className="flex flex-row gap-3 px-10 text-lg">
             <img src={address1} alt="" className=" w-[12%]" />
             <div className="flex flex-col">
               <h3 className="font-bold">Cookpad</h3>
               <p className=" text-gray-500">cookpad.com</p>
             </div>
-          </div>
+          </a>
           <hr />
-          <div className="flex flex-row gap-3 px-10 text-lg">
+          <a href="Homes.com" target="_blank" className="flex flex-row gap-3 px-10 text-lg">
             <img src={address2} alt="" className=" w-[12%]" />
             <div className="flex flex-col">
               <h3 className="font-bold">Homes</h3>
               <p className=" text-gray-500">Homes.com</p>
             </div>
-          </div>
+          </a>
           <hr />
-          <div className="flex flex-row gap-3 px-10 text-lg pb-6">
+          <a href="vrbo.com" target="_blank" className="flex flex-row gap-3 px-10 text-lg pb-6">
             <img src={address3} alt="" className=" w-[10%] h-[50%] mt-3" />
             <div className="flex flex-col">
               <h3 className="font-bold">Vrbo</h3>
               <p className=" text-gray-500">vrbo.com</p>
             </div>
-          </div>
+          </a>
         </div>
       </div>
 
@@ -159,25 +159,25 @@ const index = () => {
         </div>
 
         <div className="grid grid-cols-4">
-        <div className="flex flex-col items-center text-center">
+        <a href="https://onionbrowser.com/" target="_blank" className="flex flex-col items-center text-center">
             <img src={search1} alt="" className="h-[4rem]" />
             <p>Onion</p>
-          </div>
+          </a>
 
-          <div className="flex flex-col items-center text-center">
+          <a href="https://imovie.com/" target="_blank" className="flex flex-col items-center text-center">
             <img src={search2} alt="" className="h-[4rem]" />
             <p>Video Editing Tool</p>
-          </div>
+          </a>
 
-          <div className="flex flex-col items-center text-center">
+          <a href="Riddler.io" target="_blank" className="flex flex-col items-center text-center">
             <img src={search3} alt="" className="h-[4rem]" />
             <p>Riddler.io</p>
-          </div>
+          </a>
 
-          <div className="flex flex-col items-center text-center pb-10">
+          <a href="https://www.seo.com/" target="_blank" className="flex flex-col items-center text-center pb-10">
             <img src={search4} alt="" className="h-[4rem]" />
             <p>SEO Extension</p>
-          </div>
+          </a>
         </div>  
       </div>
 
@@ -193,29 +193,29 @@ const index = () => {
         </div>
 
         <div className="flex flex-col gap-3 pb-10">
-          <div className="flex flex-row gap-3 px-10 text-lg">
+          <a href="https://cookpad.com/" target="_blank" className="flex flex-row gap-3 px-10 text-lg">
             <img src={address1} alt="" className=" w-[12%]" />
             <div className="flex flex-col">
               <h3 className="font-bold">Android App</h3>
               <p className=" text-gray-500">github.com/topics/profile-link</p>
             </div>
-          </div>
+          </a>
           <hr />
-          <div className="flex flex-row gap-3 px-10 text-lg">
+          <a href="https://github.com/" target="_blank" className="flex flex-row gap-3 px-10 text-lg">
             <img src={page1} alt="" className=" w-[12%]" />
             <div className="flex flex-col">
               <h3 className="font-bold">Archived today</h3>
               <p className=" text-gray-500">chaches clear </p>
             </div>
-          </div>
+          </a>
           <hr />
-          <div className="flex flex-row gap-3 px-10 text-lg pb-6">
+          <a href="https://vbro/" target="_blank" className="flex flex-row gap-3 px-10 text-lg pb-6">
             <img src={page2} alt="" className=" w-[12%]" />
             <div className="flex flex-col">
               <h3 className="font-bold">Vrbo</h3>
               <p className=" text-gray-500">vrbo.com</p>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>

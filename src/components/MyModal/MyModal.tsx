@@ -53,19 +53,19 @@ const MyModal = ({ visible, onClose }: ModalToggling) => {
               <button className="flex flow-row justify-between bg-gray-500 py-3 px-8 rounded-full font-semibold flex-row items-center">
                 Copy<span>Adi2345</span>
               </button>
-              <button className="flex flow-row justify-between bg-green-600 py-3 px-8 rounded-full font-semibold flex-row items-center">
+              <a href="https://www.amazon.com/" target="_blank" className="flex flow-row justify-between bg-green-600 py-3 px-8 rounded-full font-semibold flex-row items-center">
                 Go To Amazon Shop
                 <span>
                   <img src={icon1} alt="" />
                 </span>
-              </button>
+              </a>
             </div>
-            <div className="flex flex-col gap-2 md:items-center md:pt-2 md:justify-center max-md:pt-2 max-md:justify-center">
+            <div className="flex flex-col gap-2 max-md:items-center md:pt-2 md:justify-center justify-end max-md:pt-2 max-md:justify-center">
               <p>
                 Share your link with your friends and earn as if you were
                 shopping yourself. Coin7 makes earning money easy!
               </p>
-              <button className="w-[20%] max-md:ml-20 max-md:w-[40%] flex flow-row justify-between bg-gray-200 py-3 px-8 rounded-full font-semibold flex-row items-center">
+              <button className="w-[20%] max-md:items-center max-md:w-[40%] flex flow-row justify-between bg-gray-200 py-3 px-8 rounded-full font-semibold flex-row">
                 <span>
                   <img src={shareIcon} alt="" />
                 </span>
@@ -98,12 +98,12 @@ const MyModal = ({ visible, onClose }: ModalToggling) => {
                     <input type="text" placeholder="Order" className="border-2 border-gray-300 outline-none p-2 rounded-lg"/>
                 </div>
                 <div className="flex flex-col gap-3">
-                    Order
-                    <input type="text" placeholder="Order" className="border-2 border-gray-300 outline-none p-2 rounded-lg" />
+                Net Purchase Price
+                    <input type="text" placeholder="Net purchase" className="border-2 border-gray-300 outline-none p-2 rounded-lg" />
                 </div>
                 <div className="flex flex-col gap-3">
-                    Order
-                    <input type="text" placeholder="Order" className="border-2 border-gray-300 outline-none p-2 rounded-lg"/>
+                Confirmed
+                    <input type="text" placeholder="Amount" className="border-2 border-gray-300 outline-none p-2 rounded-lg"/>
                 </div>
                 <div>
                 <button className=" bg-slate-500 px-4 rounded-full mt-2 h-[70%] max-md:h-[100%] max-md:mt-2">Go To Order</button>
