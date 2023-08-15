@@ -5,11 +5,11 @@
 }
 
 .accordion-visible {
-    background: hsl(12, 4%, 74%);
+    background: hsl(0, 1%, 87%);
     width: 100%;
     color: #000;
     cursor: pointer;
-    border:hsl(12, 4%, 74%);
+    border:hslhsl(0, 1%, 87%);
     display: flex;
     justify-content: space-between;
     align-items: center;

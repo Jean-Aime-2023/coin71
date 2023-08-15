@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import "./index.css";
 import { AccordionProps } from "./AccordionTypes";
 import icon1 from "../../assets/mdi_pan-right.png";
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const Index: React.FC<AccordionProps> = ({
   title,
@@ -27,16 +29,20 @@ const Index: React.FC<AccordionProps> = ({
     setToggle(!toggle);
   };
 
+  useEffect(()=>{
+    Aos.init({duration:2000})
+  },[])
+
   return (
     <div className="accordion items-center" data-aos="fade-up">
       <div
         onClick={toggleState}
         className="accordion-visible flex flex-row gap-10 px-10 max-md:flex-col max-md:gap-0"
       >
-        <span className="text-red-500 text-2xl text-center flex-wrap font-semibold">{title}</span>
+        <span className="text-red-500 text-2xl text-center flex-wrap font-semibold max-md:hidden">{title}</span>
         <span>{desc}</span>
         
-        <div className="flex flex-col mt-10">
+        <div className="flex flex-col mt-10 max-md:hidden">
         <div className=" bg-gray-500 rounded-full flex flex-row hover:bg-gray-400 hover:transition hover:ease-in-out delay-150">
           <button className="flex flex-row text-center items-center px-2 w-[14rem] pl-5">
           {button}{" "}

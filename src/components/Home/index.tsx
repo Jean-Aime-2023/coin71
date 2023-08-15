@@ -30,19 +30,29 @@ const index: React.FC = () => {
           <img src={logo} alt="" />
           <ul className="flex flex-row gap-10 max-md:hidden">
             <li>
-              <a href="/" className="hover:text-red-500">Home</a>
+              <a href="/" className="hover:text-red-500">
+                Home
+              </a>
             </li>
             <li>
-              <a href="#" className="hover:text-red-500">Shop</a>
+              <a href="#" className="hover:text-red-500">
+                Shop
+              </a>
             </li>
             <li>
-              <a href="#" className="hover:text-red-500">Coupons</a>
+              <a href="#" className="hover:text-red-500">
+                Coupons
+              </a>
             </li>
             <li>
-              <a href="#" className="hover:text-red-500">Apps</a>
+              <a href="#" className="hover:text-red-500">
+                Apps
+              </a>
             </li>
             <li>
-              <a href="#" className="hover:text-red-500">My Favorite</a>
+              <a href="#" className="hover:text-red-500">
+                My Favorite
+              </a>
             </li>
           </ul>
           <div className="cursor-pointer">

@@ -29,6 +29,9 @@ import page2 from '../../assets/image 29-1.png'
 
 import {useState} from 'react'
 
+import { useEffect } from 'react'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const index = () => {
   const [open4,setOpen4] = useState(false)
@@ -58,7 +61,7 @@ const index = () => {
 
   return (
     <div className="flex flex-col gap-6 flex-1">
-      <div className=" flex flex-col gap-3 card1 rounded-2xl">
+      <div className=" flex flex-col gap-3 card1 rounded-2xl" data-aos="fade-down">
         <div className="flex flex-row justify-between p-10">
           <h1 className=" text-2xl font-bold">Bookmarks</h1>
           <div className="flex flex-row gap-10">
@@ -102,7 +105,7 @@ const index = () => {
         </div>
       </div>
 
-      <div className=" flex flex-col gap-3 card1 rounded-2xl">
+      <div className=" flex flex-col gap-3 card1 rounded-2xl" data-aos="fade-up">
         <div className="flex flex-row justify-between p-10">
           <h1 className=" text-2xl font-bold">Apps</h1>
           <div className="flex flex-row gap-10">
@@ -136,7 +139,7 @@ const index = () => {
         </div>  
       </div>
 
-      <div className=" flex flex-col gap-3 card2 rounded-2xl">
+      <div className=" flex flex-col gap-3 card2 rounded-2xl" data-aos="fade-up">
         <div className="flex flex-row justify-between p-10">
           <h1 className=" text-2xl font-bold">Blog</h1>
           <div className="flex flex-row gap-10">
@@ -174,7 +177,7 @@ const index = () => {
         </div>
       </div>
 
-      <div className=" flex flex-col gap-3 card1 rounded-2xl">
+      <div className=" flex flex-col gap-3 card1 rounded-2xl" data-aos="fade-up">
         <div className="flex flex-row justify-between p-10">
           <h1 className=" text-2xl font-bold">Apps</h1>
           <div className="flex flex-row gap-10">
@@ -208,7 +211,7 @@ const index = () => {
         </div>  
       </div>
 
-      <div className="flex flex-col gap-3 card1 rounded-2xl">
+      <div className="flex flex-col gap-3 card1 rounded-2xl" data-aos="fade-up">
         <div className="flex flex-row justify-between p-10">
           <h1 className=" text-2xl font-bold">Blog</h1>
           <div className="flex flex-row gap-10">

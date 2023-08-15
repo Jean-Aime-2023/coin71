@@ -39,3 +39,35 @@ a[aria-current="page"]{
 .scaled{
   transform: scale(2, 2);
 }
+
+@media screen and (max-width:500px) {
+  body{
+    width: 140vw;
+  }
+}
+
+@media screen and (max-width:390px) {
+  body{
+    width: 180vw;
+  }
+}
+
+@media screen and (max-width:1675px) {
+  body{
+    width: 140vw;
+  }
+}
+
+@media screen and (max-width:370px) {
+  body{
+    width: 180vw;
+  }
+}
+
+@media screen and (max-width:792px) {
+  .select{
+    position: relative;
+    top: 5rem;
+    right: 10%;
+  }
+}

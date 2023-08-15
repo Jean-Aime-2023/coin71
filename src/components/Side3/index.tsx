@@ -12,8 +12,14 @@ import people from '../../assets/image 40.png'
 import people1 from '../../assets/image 41.png'
 import peopl2 from '../../assets/image 42.png'
 
+import Chart from '../Chart'
+
 import {useState} from 'react'
-import { Hidden } from "@mui/material";
+
+import { useEffect } from "react";
+
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const index = () => {
   const [open9,setOpen9] = useState(false)
@@ -36,9 +42,13 @@ const index = () => {
     setOpen12(!open12)
   }
 
+  useEffect(()=>{
+    Aos.init({duration:2000})
+  },[])
+
   return (
-    <div className="flex flex-col gap-6 flex-1">
-      <div className=" flex flex-col gap-3 card1 rounded-2xl">
+    <div className="flex flex-col gap-6 flex-1 lg:grid max-lg:grid-cols-2 max:lg:w-[200vw]">
+      <div className=" flex flex-col gap-3 card1 rounded-2xl" data-aos="fade-down">
         <div className="flex flex-row justify-between p-10">
           <h1 className=" text-2xl font-bold">Weather</h1>
           <div className="flex flex-row gap-10">
@@ -82,7 +92,7 @@ const index = () => {
         </div>
       </div>
 
-      <div className=" flex flex-col gap-3 card3 rounded-2xl">
+      <div className=" flex flex-col gap-3 card3 rounded-2xl" data-aos="fade-up">
         <div className="flex flex-row justify-between px-10 py-5">
           <h1 className=" text-2xl font-bold">ToDo List</h1>
           <div className="flex flex-row gap-10">
@@ -115,7 +125,7 @@ const index = () => {
         </div>
       </div>
 
-      <div className=" flex flex-col gap-3 card1 rounded-3xl">
+      <div className=" flex flex-col gap-3 card1 rounded-3xl" data-aos="fade-up">
         <div className="flex flex-row justify-between px-10 py-7">
           <h1 className=" text-2xl font-bold">Trending view chart</h1>
           <div className="flex flex-row gap-10">
@@ -127,11 +137,11 @@ const index = () => {
         </div>
 
         <div className={open11?"hidden":""}>
-          <img src={chart} alt=""   className="w-full"/>
+          <Chart/>
         </div>
       </div>
 
-      <div className=" flex flex-col gap-3 card1 rounded-3xl">
+      <div className=" flex flex-col gap-3 card1 rounded-3xl" data-aos="fade-up">
         <div className="flex flex-row justify-between px-10 py-7">
           <h1 className=" text-2xl font-bold">News</h1>
           <div className="flex flex-row gap-10">

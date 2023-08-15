@@ -2,6 +2,9 @@ import logo from "../../assets/image 5-1.png";
 import flag from "../../assets/image 12.png";
 import icon1 from "../../assets/mdi_pan-right.png";
 import shareIcon from '../../assets/ri_share-line.png' 
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 type ModalToggling = {
   visible: boolean;
@@ -9,6 +12,10 @@ type ModalToggling = {
 };
 
 const MyModal = ({ visible, onClose }: ModalToggling) => {
+  useEffect(()=>{
+    Aos.init({duration:1000})
+  },[])
+
   const handleOnClose = (e: any) => {
     if (e.target.id === "container") onClose();
   };
@@ -19,7 +26,7 @@ const MyModal = ({ visible, onClose }: ModalToggling) => {
       id="container"
       className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center"
     >
-      <div className="bg-white p-20 rounded-3xl flex flex-col gap-3 h-[90%] w-[90%] overflow-y-scroll overflow-x-hidden max-md:p-10 max-md:text-xs">
+      <div data-aos="fade-out" className="bg-white p-20 rounded-3xl flex flex-col gap-3 h-[90%] w-[90%] overflow-y-scroll overflow-x-hidden max-md:p-10 max-md:text-xs">
         <img src={logo} alt="" className="w-[10%] max-lg:w-[30%]" />
         <div className="flex flex-row justify-between">
           <div className="flex flex-col">
