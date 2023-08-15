@@ -32,15 +32,19 @@ import {useState} from 'react'
 const index = () => {
 
   const [open,setOpen] = useState(false)
-  const [open,setOpen] = useState(false)
-  const [voucher,setVoucher] = useState(false)
+  const [open1,setOpen1] = useState(false)
+  const [open3,setOpen3] = useState(false)
 
   const handleCard=()=>{
     setOpen(!open)
   }
 
-  const handleVoucher=()=>{
-    setVoucher(!voucher)
+  const handleCard1=()=>{
+    setOpen1(!open1)
+  }
+
+  const handleCard3=()=>{
+    setOpen3(!open3)
   }
 
   return (
@@ -455,11 +459,11 @@ const index = () => {
           <img src={icon1} alt="" className="w-[100%] h-[80%] cursor-pointer" />
             <img src={icon2} alt="" className="w-[100%] h-[80%] cursor-pointer" />
             <img src={icon3} alt="" className="w-[100%] h-[80%] cursor-pointer" />
-            <img src={icon4} alt="" className={open ? "w-[100%] h-[80%] cursor-pointer" : "w-[100%] h-[80%] cursor-pointer rotate-180"} onClick={handleCard}/>
+            <img src={icon4} alt="" className={open1 ? "w-[100%] h-[80%] cursor-pointer" : "w-[100%] h-[80%] cursor-pointer rotate-180"} onClick={handleCard1}/>
           </div>
         </div>
 
-        <div className="flex flex-col gap-3">
+        <div className={open1 ? "hidden" : "flex flex-col gap-3"}>
           <a href="https://www.blog-search.com/" target="_blank" className="flex flex-row gap-3 px-10 text-lg">
             <img src={blogIcon1} alt="" className=" w-[12%]" />
             <div className="flex flex-col">
@@ -493,11 +497,11 @@ const index = () => {
           <img src={icon1} alt="" className="w-[100%] h-[80%] cursor-pointer" />
             <img src={icon2} alt="" className="w-[100%] h-[80%] cursor-pointer" />
             <img src={icon3} alt="" className="w-[100%] h-[80%] cursor-pointer" />
-            <img src={icon4} alt="" className={open ? "w-[100%] h-[80%] cursor-pointer" : "w-[100%] h-[80%] cursor-pointer rotate-180"} onClick={handleCard}/>
+            <img src={icon4} alt="" className={open3 ? "w-[100%] h-[80%] cursor-pointer" : "w-[100%] h-[80%] cursor-pointer rotate-180"} onClick={handleCard3}/>
           </div>
         </div>
 
-        <div className="flex flex-col gap-5">
+        <div className={open3 ? "hidden" : "flex flex-col gap-5"}>
           <ul className="flex flex-row gap-7">
             <li>
               <a

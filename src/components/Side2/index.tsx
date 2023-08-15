@@ -31,10 +31,31 @@ import {useState} from 'react'
 
 
 const index = () => {
-  const [open,setOpen] = useState(false)
-  const handleCard=()=>{
-    setOpen(!open)
+  const [open4,setOpen4] = useState(false)
+  const handleCard4=()=>{
+    setOpen4(!open4)
   }
+
+  const [open5,setOpen5] = useState(false)
+  const handleCard5=()=>{
+    setOpen5(!open5)
+  }
+
+  const [open6,setOpen6] = useState(false)
+  const handleCard6=()=>{
+    setOpen6(!open6)
+  }
+
+  const [open7,setOpen7] = useState(false)
+  const handleCard7=()=>{
+    setOpen7(!open7)
+  }
+
+  const [open8,setOpen8] = useState(false)
+  const handleCard8=()=>{
+    setOpen8(!open8)
+  }
+
   return (
     <div className="flex flex-col gap-6 flex-1">
       <div className=" flex flex-col gap-3 card1 rounded-2xl">
@@ -44,11 +65,11 @@ const index = () => {
           <img src={icon1} alt="" className="w-[100%] h-[80%] cursor-pointer" />
             <img src={icon2} alt="" className="w-[100%] h-[80%] cursor-pointer" />
             <img src={icon3} alt="" className="w-[100%] h-[80%] cursor-pointer" />
-            <img src={icon4} alt="" className={open ? "w-[100%] h-[80%] cursor-pointer" : "w-[100%] h-[80%] cursor-pointer rotate-180"} onClick={handleCard}/>
+            <img src={icon4} alt="" className={open4 ? "w-[100%] h-[80%] cursor-pointer" : "w-[100%] h-[80%] cursor-pointer rotate-180"} onClick={handleCard4}/>
           </div>
         </div>
 
-        <div className="grid grid-cols-4">
+        <div className={open4?"hidden":"grid grid-cols-4"}>
           <a href="https://www.microsoft.com/en-us/microsoft-365/word" target="_blank" className="flex flex-col items-center text-center">
             <img src={icons6} alt="" className="h-[4rem]" />
             <p>Word doc</p>
@@ -88,11 +109,11 @@ const index = () => {
           <img src={icon1} alt="" className="w-[100%] h-[80%] cursor-pointer" />
             <img src={icon2} alt="" className="w-[100%] h-[80%] cursor-pointer" />
             <img src={icon3} alt="" className="w-[100%] h-[80%] cursor-pointer" />
-            <img src={icon4} alt="" className={open ? "w-[100%] h-[80%] cursor-pointer" : "w-[100%] h-[80%] cursor-pointer rotate-180"} onClick={handleCard}/>
+            <img src={icon4} alt="" className={open5 ? "w-[100%] h-[80%] cursor-pointer" : "w-[100%] h-[80%] cursor-pointer rotate-180"} onClick={handleCard5}/>
           </div>
         </div>
 
-        <div className="grid grid-cols-4">
+        <div className={open5 ? "hidden" : "grid grid-cols-4"}>
         <a href="https://www.managemypain.net/" target="_blank" className="flex flex-col items-center text-center">
             <img src={app1} alt="" className="h-[4rem]" />
             <p>Manage My Pain</p>
@@ -122,11 +143,11 @@ const index = () => {
           <img src={icon1} alt="" className="w-[100%] h-[80%] cursor-pointer" />
             <img src={icon2} alt="" className="w-[100%] h-[80%] cursor-pointer" />
             <img src={icon3} alt="" className="w-[100%] h-[80%] cursor-pointer" />
-            <img src={icon4} alt="" className={open ? "w-[100%] h-[80%] cursor-pointer" : "w-[100%] h-[80%] cursor-pointer rotate-180"} onClick={handleCard}/>
+            <img src={icon4} alt="" className={open6 ? "w-[100%] h-[80%] cursor-pointer" : "w-[100%] h-[80%] cursor-pointer rotate-180"} onClick={handleCard6}/>
           </div>
         </div>
 
-        <div className="flex flex-col gap-3 pb-10">
+        <div className={open6?"hidden":"flex flex-col gap-3 pb-10"}>
           <a href="cookpad.com" target="_blank" className="flex flex-row gap-3 px-10 text-lg">
             <img src={address1} alt="" className=" w-[12%]" />
             <div className="flex flex-col">
@@ -160,11 +181,11 @@ const index = () => {
           <img src={icon1} alt="" className="w-[100%] h-[80%] cursor-pointer" />
             <img src={icon2} alt="" className="w-[100%] h-[80%] cursor-pointer" />
             <img src={icon3} alt="" className="w-[100%] h-[80%] cursor-pointer" />
-            <img src={icon4} alt="" className={open ? "w-[100%] h-[80%] cursor-pointer" : "w-[100%] h-[80%] cursor-pointer rotate-180"} onClick={handleCard}/>
+            <img src={icon4} alt="" className={open7 ? "w-[100%] h-[80%] cursor-pointer" : "w-[100%] h-[80%] cursor-pointer rotate-180"} onClick={handleCard7}/>
           </div>
         </div>
 
-        <div className="grid grid-cols-4">
+        <div className={open7?"hidden":"grid grid-cols-4"}>
         <a href="https://onionbrowser.com/" target="_blank" className="flex flex-col items-center text-center">
             <img src={search1} alt="" className="h-[4rem]" />
             <p>Onion</p>
@@ -187,18 +208,18 @@ const index = () => {
         </div>  
       </div>
 
-      <div className=" flex flex-col gap-3 card1 rounded-2xl">
+      <div className="flex flex-col gap-3 card1 rounded-2xl">
         <div className="flex flex-row justify-between p-10">
           <h1 className=" text-2xl font-bold">Blog</h1>
           <div className="flex flex-row gap-10">
           <img src={icon1} alt="" className="w-[100%] h-[80%] cursor-pointer" />
             <img src={icon2} alt="" className="w-[100%] h-[80%] cursor-pointer" />
             <img src={icon3} alt="" className="w-[100%] h-[80%] cursor-pointer" />
-            <img src={icon4} alt="" className={open ? "w-[100%] h-[80%] cursor-pointer" : "w-[100%] h-[80%] cursor-pointer rotate-180"} onClick={handleCard}/>
+            <img src={icon4} alt="" className={open8 ? "w-[100%] h-[80%] cursor-pointer" : "w-[100%] h-[80%] cursor-pointer rotate-180"} onClick={handleCard8}/>
           </div>
         </div>
 
-        <div className="flex flex-col gap-3 pb-10">
+        <div className={open8?"hidden":"flex flex-col gap-3 pb-10"}>
           <a href="https://cookpad.com/" target="_blank" className="flex flex-row gap-3 px-10 text-lg">
             <img src={address1} alt="" className=" w-[12%]" />
             <div className="flex flex-col">
