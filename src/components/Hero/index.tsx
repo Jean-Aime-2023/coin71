@@ -19,27 +19,27 @@ const index = () => {
            <img src={searchIcon} alt="" className='absolute left-[94%]'/>
         </div>
         <div className='flex flex-row gap-8 absolute top-[25%] md:flex-wrap'>
-            <a href='https://www.aliexpress.com/' target="_blank" className='bg-white h-[100%] p-2 rounded-xl flex flex-col justify-center items-center'>
+            <a href='https://www.aliexpress.com/' target="_blank" className='bg-white h-[100%] p-2 rounded-xl flex flex-col justify-center items-center hover:scale-x-110 hover:scale-y-125 hover:transition ease-in-out delay-150'>
                <img src={brand1} alt="" className='h-7'/>
                <p className=' text-sm'>Ali Express</p>
             </a>
 
-            <a href='https://www.ebay.com/' target="_blank" className='bg-white h-[100%] p-2 rounded-xl flex flex-col justify-center items-center'>
+            <a href='https://www.ebay.com/' target="_blank" className='bg-white h-[100%] p-2 rounded-xl flex flex-col justify-center items-center hover:scale-x-110 hover:scale-y-125 hover:transition ease-in-out delay-150'>
                <img src={brand2} alt="" className='h-7'/>
                <p className=' text-sm'>Ebay</p>
             </a>
 
-            <a href='https://www.apple.com/' target="_blank" className='bg-white h-[100%] p-2 rounded-xl flex flex-col justify-center items-center px-6'>
+            <a href='https://www.apple.com/' target="_blank" className='bg-white h-[100%] p-2 rounded-xl flex flex-col justify-center items-center px-6 hover:scale-x-110 hover:scale-y-125 hover:transition ease-in-out delay-150'>
                <img src={brand3} alt="" className='h-7'/>
                <p className=' text-sm'>Apple</p>
             </a>
 
-            <a href='https://www.adidas.com/us' target="_blank" className='bg-white h-[100%] rounded-xl flex flex-col justify-center items-center py-2 px-4'>
+            <a href='https://www.adidas.com/us' target="_blank" className='bg-white h-[100%] rounded-xl flex flex-col justify-center items-center py-2 px-4 hover:scale-x-110 hover:scale-y-125 hover:transition ease-in-out delay-150'>
                <img src={brand4} alt="" className='h-7'/>
                <p className=' text-sm'>Adidas</p>
             </a>
 
-            <a href='https://www.alibaba.com/' target="_blank" className='bg-white h-[100%] p-2 rounded-xl flex flex-col justify-center items-center'>
+            <a href='https://www.alibaba.com/' target="_blank" className='bg-white h-[100%] p-2 rounded-xl flex flex-col justify-center items-center hover:scale-x-110 hover:scale-y-125 hover:transition ease-in-out delay-150'>
                <img src={brand5} alt="" className='h-7'/>
                <p className=' text-sm'>Alibaba</p>
             </a>

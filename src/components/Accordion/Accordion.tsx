@@ -29,7 +29,7 @@ const Index: React.FC<AccordionProps> = ({
 
   return (
     <div className="accordion items-center" data-aos="fade-up">
-      <button
+      <div
         onClick={toggleState}
         className="accordion-visible flex flex-row gap-10 px-10 max-md:flex-col max-md:gap-0"
       >
@@ -37,18 +37,18 @@ const Index: React.FC<AccordionProps> = ({
         <span>{desc}</span>
         
         <div className="flex flex-col mt-10">
-        <div className=" bg-gray-500 rounded-full flex flex-row">
-          <button className="flex flex-row text-center items-center px-4 w-[14rem]">
+        <div className=" bg-gray-500 rounded-full flex flex-row hover:bg-gray-400 hover:transition hover:ease-in-out delay-150">
+          <button className="flex flex-row text-center items-center px-2 w-[14rem] pl-5">
           {button}{" "}
-          <span className=" rotate-90">
-            <img src={icon1} alt="" className=" w-[1.6rem]"/>{" "}
+          <span className="rotate-90">
+            <img src={icon1} alt="" className="w-[1.6rem]"/>{" "}
           </span>
           </button>
         </div>
-        <span className=" text-xs">{smalltext}</span>
+        <span className="text-xs">{smalltext}</span>
         </div>
 
-      </button>
+      </div>
 
       <div
         className={toggle ? "accordion-toggle animated" : "accordion-toggle"}

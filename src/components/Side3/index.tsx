@@ -12,61 +12,67 @@ import people from '../../assets/image 40.png'
 import people1 from '../../assets/image 41.png'
 import peopl2 from '../../assets/image 42.png'
 
+import {useState} from 'react'
+
 const index = () => {
+  const [open,setOpen] = useState(false)
+  const handleCard=()=>{
+    setOpen(!open)
+  }
   return (
     <div className="flex flex-col gap-6 flex-1">
       <div className=" flex flex-col gap-3 card1 rounded-2xl">
         <div className="flex flex-row justify-between p-10">
           <h1 className=" text-2xl font-bold">Weather</h1>
           <div className="flex flex-row gap-10">
-            <img src={icon1} alt="" className="w-[100%] h-[80%]" />
-            <img src={icon2} alt="" className="w-[100%] h-[80%]" />
-            <img src={icon3} alt="" className="w-[100%] h-[80%]" />
-            <img src={icon4} alt="" className="w-[100%] h-[80%]" />
+          <img src={icon1} alt="" className="w-[100%] h-[80%] cursor-pointer" />
+            <img src={icon2} alt="" className="w-[100%] h-[80%] cursor-pointer" />
+            <img src={icon3} alt="" className="w-[100%] h-[80%] cursor-pointer" />
+            <img src={icon4} alt="" className={open ? "w-[100%] h-[80%] cursor-pointer" : "w-[100%] h-[80%] cursor-pointer rotate-180"} onClick={handleCard}/>
           </div>
         </div>
 
-        <a href="https://weather.com/" target="_blank" className="grid grid-cols-5">
-          <div className="flex flex-col items-center text-center">
+        <div className="grid grid-cols-5">
+          <a href="https://weather.com/" target="_blank" className="flex flex-col items-center text-center">
             <p>Sunday</p>
             <img src={icons2} alt="" className="h-[4rem]" />
             <p>10C</p>
-          </div>
+          </a>
 
-          <div className="flex flex-col items-center text-center">
+          <a href="https://weather.com/" target="_blank" className="flex flex-col items-center text-center">
             <p>Monday</p>
             <img src={icons1} alt="" className="h-[4rem]" />
             <p>35C</p>
-          </div>
+          </a>
 
-          <div className="flex flex-col items-center text-center">
+          <a href="https://weather.com/" target="_blank" className="flex flex-col items-center text-center">
             <p>Tuesday</p>
             <img src={icons1} alt="" className="h-[4rem]" />
             <p>35C</p>
-          </div>
+          </a>
 
-          <div className="flex flex-col items-center text-center">
+          <a href="https://weather.com/" target="_blank" className="flex flex-col items-center text-center">
             <p>Wednesday</p>
             <img src={icons1} alt="" className="h-[4rem]" />
             <p>35C</p>
-          </div>
+          </a>
 
-          <div className="flex flex-col items-center text-center pb-9">
+          <a href="https://weather.com/" target="_blank" className="flex flex-col items-center text-center pb-9">
             <p>Thursday</p>
             <img src={icons2} alt="" className="h-[4rem]" />
             <p>20C</p>
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
 
       <div className=" flex flex-col gap-3 card3 rounded-2xl">
         <div className="flex flex-row justify-between px-10 py-5">
           <h1 className=" text-2xl font-bold">ToDo List</h1>
           <div className="flex flex-row gap-10">
-            <img src={icon1} alt="" className="w-[100%] h-[80%]" />
-            <img src={icon2} alt="" className="w-[100%] h-[80%]" />
-            <img src={icon3} alt="" className="w-[100%] h-[80%]" />
-            <img src={icon4} alt="" className="w-[100%] h-[80%]" />
+          <img src={icon1} alt="" className="w-[100%] h-[80%] cursor-pointer" />
+            <img src={icon2} alt="" className="w-[100%] h-[80%] cursor-pointer" />
+            <img src={icon3} alt="" className="w-[100%] h-[80%] cursor-pointer" />
+            <img src={icon4} alt="" className={open ? "w-[100%] h-[80%] cursor-pointer" : "w-[100%] h-[80%] cursor-pointer rotate-180"} onClick={handleCard}/>
           </div>
         </div>
 
@@ -96,26 +102,26 @@ const index = () => {
         <div className="flex flex-row justify-between px-10 py-7">
           <h1 className=" text-2xl font-bold">Trending view chart</h1>
           <div className="flex flex-row gap-10">
-            <img src={icon1} alt="" className="w-[100%] h-[80%]" />
-            <img src={icon2} alt="" className="w-[100%] h-[80%]" />
-            <img src={icon3} alt="" className="w-[100%] h-[80%]" />
-            <img src={icon4} alt="" className="w-[100%] h-[80%]" />
+          <img src={icon1} alt="" className="w-[100%] h-[80%] cursor-pointer" />
+            <img src={icon2} alt="" className="w-[100%] h-[80%] cursor-pointer" />
+            <img src={icon3} alt="" className="w-[100%] h-[80%] cursor-pointer" />
+            <img src={icon4} alt="" className={open ? "w-[100%] h-[80%] cursor-pointer" : "w-[100%] h-[80%] cursor-pointer rotate-180"} onClick={handleCard}/>
           </div>
         </div>
 
-        <a href="https://contoso.sharepoint.com/sites/Mark8ProjectTeam/Shared%20Documents/Go%20to%20Market%20Plan/LiveCaptions.gif" target="_blank">
-          <img src={chart} alt="" className="w-[100%]" />
-        </a>
+        <div>
+          <img src={chart} alt=""   className="w-full"/>
+        </div>
       </div>
 
       <div className=" flex flex-col gap-3 card1 rounded-3xl">
         <div className="flex flex-row justify-between px-10 py-7">
           <h1 className=" text-2xl font-bold">News</h1>
           <div className="flex flex-row gap-10">
-            <img src={icon1} alt="" className="w-[100%] h-[80%]" />
-            <img src={icon2} alt="" className="w-[100%] h-[80%]" />
-            <img src={icon3} alt="" className="w-[100%] h-[80%]" />
-            <img src={icon4} alt="" className="w-[100%] h-[80%]" />
+          <img src={icon1} alt="" className="w-[100%] h-[80%] cursor-pointer" />
+            <img src={icon2} alt="" className="w-[100%] h-[80%] cursor-pointer" />
+            <img src={icon3} alt="" className="w-[100%] h-[80%] cursor-pointer" />
+            <img src={icon4} alt="" className={open ? "w-[100%] h-[80%] cursor-pointer" : "w-[100%] h-[80%] cursor-pointer rotate-180"} onClick={handleCard}/>
           </div>
         </div>
 

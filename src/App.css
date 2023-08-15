@@ -26,3 +26,16 @@ body{
   background: #ffeed4;
   backdrop-filter: blur(2px);
 }
+
+.close{
+  height: 20%;
+}
+
+a[aria-current="page"]{
+  color: red;
+  border-bottom: 2px solid red;
+}
+
+.scaled{
+  transform: scale(2, 2);
+}

@@ -27,20 +27,35 @@ import blogIcon1 from "../../assets/image 28-2.png";
 import blogIcon2 from "../../assets/image 29-2.png";
 import blogIcon3 from "../../assets/image 30-2.png";
 
+import {useState} from 'react'
+
 const index = () => {
+
+  const [open,setOpen] = useState(false)
+  const [open,setOpen] = useState(false)
+  const [voucher,setVoucher] = useState(false)
+
+  const handleCard=()=>{
+    setOpen(!open)
+  }
+
+  const handleVoucher=()=>{
+    setVoucher(!voucher)
+  }
+
   return (
     <div className="flex flex-col gap-6 flex-1">
-      <div className=" flex flex-col gap-8 card1 p-10 rounded-2xl">
+      <div className="flex flex-col gap-8 card1 p-10 rounded-2xl">
         <div className="flex flex-row justify-between">
           <h1 className=" text-2xl font-bold">Cashback</h1>
           <div className="flex flex-row gap-10">
-            <img src={icon1} alt="" className="w-[100%] h-[80%]" />
-            <img src={icon2} alt="" className="w-[100%] h-[80%]" />
-            <img src={icon3} alt="" className="w-[100%] h-[80%]" />
-            <img src={icon4} alt="" className="w-[100%] h-[80%]" />
+            <img src={icon1} alt="" className="w-[100%] h-[80%] cursor-pointer" />
+            <img src={icon2} alt="" className="w-[100%] h-[80%] cursor-pointer" />
+            <img src={icon3} alt="" className="w-[100%] h-[80%] cursor-pointer" />
+            <img src={icon4} alt="" className={open ? "w-[100%] h-[80%] cursor-pointer" : "w-[100%] h-[80%] cursor-pointer rotate-180"} onClick={handleCard}/>
           </div>
         </div>
-        <div>
+        <div className={open ? 'hidden' : ' '}>
           <li className="flex flex-row justify-between text-lg  ">
             <a
               href="#"
@@ -48,12 +63,12 @@ const index = () => {
             >
               Shop
             </a>
-            <a href="#">Vouchers</a>
-            <a href="#">My Order</a>
-            <a href="#">My Favorite</a>
+            <a href="#" className="hover:text-red-500">Vouchers</a>
+            <a href="#" className="hover:text-red-500">My Order</a>
+            <a href="#" className="hover:text-red-500">My Favorite</a>
           </li>
         </div>
-        <div className="flex flex-col gap-1">
+        <div className={open ? "hidden" : '"flex flex-col gap-1"'}>
           <hr className=" w-[100%]" />
           <div className="flex flex-row justify-between text-lg">
             <p className="text-gray-400">Shipping Country</p>
@@ -69,96 +84,96 @@ const index = () => {
           <hr />
         </div>
 
-        <div className="grid grid-cols-5 px-5 gap-4">
-          <a href="https://www.ikea.com/" target="_blank" className="flex flex-col gap-1 shadow-xl text-center justify-center items-center p-2">
+        <div className={open ? "hidden" : "grid grid-cols-5 px-5 gap-4"}>
+          <a href="https://www.ikea.com/" target="_blank" className="flex flex-col gap-1 shadow-xl text-center justify-center items-center p-2 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150'">
             <img src={image3} alt="" className="w-[80%] h-[50%]" />
             <p className="text-sm">Ikea</p>
           </a>
 
-          <a  href="https://www.aliexpress.com/" target="_blank" className="flex flex-col gap-1 shadow-xl text-center justify-center items-center p-2">
+          <a  href="https://www.aliexpress.com/" target="_blank" className="flex flex-col gap-1 shadow-xl text-center justify-center items-center p-2 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150'">
             <img src={brand1} alt="" className="w-[80%] h-[30%]" />
             <p className="text-sm">AliExpress</p>
           </a>
 
-          <a href="https://www.ebay.com/" target="_blank" className="flex flex-col gap-1 shadow-xl text-center items-center justify-center p-2">
+          <a href="https://www.ebay.com/" target="_blank" className="flex flex-col gap-1 shadow-xl text-center items-center justify-center p-2 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150'">
             <img src={brand2} alt="" className="w-[80%] h-[30%]" />
             <p className="text-sm">ebay</p>
           </a>
 
-          <a href="https://www.apple.com/" target="_blank" className="flex flex-col gap-1 shadow-xl text-center justify-center items-center p-2">
+          <a href="https://www.apple.com/" target="_blank" className="flex flex-col gap-1 shadow-xl text-center justify-center items-center p-2 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150'">
             <img src={brand3} alt="" className="w-[40%] h-[40%]" />
             <p className="text-sm">Apple</p>
           </a>
 
-          <a href="https://www.adidas.com/us" target="_blank" className="flex flex-col gap-1 shadow-xl text-center items-center justify-center p-2">
+          <a href="https://www.adidas.com/us" target="_blank" className="flex flex-col gap-1 shadow-xl text-center items-center justify-center p-2 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150">
             <img src={brand4} alt="" className="w-[80%] h-[80%]" />
             <p className="text-sm">Adidas</p>
           </a>
 
-          <a href="https://alibaba.com/" target="_blank" className="flex flex-col gap-1 shadow-xl text-center items-center justify-center p-2">
+          <a href="https://alibaba.com/" target="_blank" className="flex flex-col gap-1 shadow-xl text-center items-center justify-center p-2 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150'">
             <img src={brand5} alt="" className="w-[80%] h-[50%]" />
             <p className="text-sm">Alibaba</p>
           </a>
 
-          <a href="https://www2.hm.com/en_us/index.html" target="_blank" className="flex flex-col gap-1 shadow-xl text-center items-center justify-center p-2">
+          <a href="https://www2.hm.com/en_us/index.html" target="_blank" className="flex flex-col gap-1 shadow-xl text-center items-center justify-center p-2 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150">
             <img src={brand6} alt="" className="w-[80%] h-[30%]" />
             <p className="text-sm">H&M</p>
           </a>
 
-          <a href="https://www.walmart.com/" target="_blank" className="flex flex-col gap-1 shadow-xl text-center items-center justify-center p-2">
+          <a href="https://www.walmart.com/" target="_blank" className="flex flex-col gap-1 shadow-xl text-center items-center justify-center p-2 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150">
             <img src={brand7} alt="" className="w-[80%] h-[50%]" />
             <p className="text-sm">Walmart</p>
           </a>
 
-          <a href="https://www.rakuten.com/" target="_blank" className="flex flex-col gap-1 shadow-xl text-center items-center justify-center p-2">
+          <a href="https://www.rakuten.com/" target="_blank" className="flex flex-col gap-1 shadow-xl text-center items-center justify-center p-2 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150">
             <img src={brand8} alt="" className="w-[80%] h-[50%]" />
             <p className="text-sm">Rakuten</p>
           </a>
 
-          <a href="https://www.amazon.com/" target="_blank" className="flex flex-col gap-1 shadow-xl text-center items-center justify-center p-2">
+          <a href="https://www.amazon.com/" target="_blank" className="flex flex-col gap-1 shadow-xl text-center items-center justify-center p-2 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150">
             <img src={brand9} alt="" className="w-[100%] h-[80%]" />
             <p className="text-sm">Amazon</p>
           </a>
         </div>
 
-        <li className="flex justify-between">
+        <li className={open ? "hidden" : "flex justify-between"}>
           <a
             href="#"
             className="text-red-500 border border-b-red-500 border-b-4"
           >
             A
           </a>
-          <a href="">B</a>
-          <a href="">C</a>
-          <a href="">D</a>
-          <a href="">E</a>
-          <a href="">F</a>
-          <a href="">G</a>
-          <a href="">H</a>
-          <a href="">I</a>J<a href="">K</a>
-          <a href="">L</a>
-          <a href="">M</a>
-          <a href="">N</a>
-          <a href="">O</a>
-          <a href="">P</a>
-          <a href="">Q</a>
-          <a href="">R</a>
-          <a href="">S</a>
-          <a href="">T</a>
-          <a href="">U</a>
-          <a href="">V</a>
-          <a href="">W</a>
-          <a href="">X</a>
-          <a href="">Y</a>
-          <a href="">z</a>
+          <a href="" className="hover:text-red-500">B</a>
+          <a href="" className="hover:text-red-500">C</a>
+          <a href="" className="hover:text-red-500">D</a>
+          <a href="" className="hover:text-red-500">E</a>
+          <a href="" className="hover:text-red-500">F</a>
+          <a href="" className="hover:text-red-500">G</a>
+          <a href="" className="hover:text-red-500">H</a>
+          <a href="" className="hover:text-red-500">I</a>J<a href="" className="hover:text-red-500">K</a>
+          <a href="" className="hover:text-red-500">L</a>
+          <a href="" className="hover:text-red-500">M</a>
+          <a href="" className="hover:text-red-500">N</a>
+          <a href="" className="hover:text-red-500">O</a>
+          <a href="" className="hover:text-red-500">P</a>
+          <a href="" className="hover:text-red-500">Q</a>
+          <a href="" className="hover:text-red-500">R</a>
+          <a href="" className="hover:text-red-500">S</a>
+          <a href="" className="hover:text-red-500">T</a>
+          <a href="" className="hover:text-red-500">U</a>
+          <a href="" className="hover:text-red-500">V</a>
+          <a href="" className="hover:text-red-500">W</a>
+          <a href="" className="hover:text-red-500">X</a>
+          <a href="" className="hover:text-red-500">Y</a>
+          <a href="" className="hover:text-red-500">z</a>
         </li>
 
-        <div className=" flex flex-col gap-2">
+        <div className={open ? "hidden" : "flex flex-col gap-2"}>
           <p>
             A <span>Top 8</span>
           </p>
           <div className="grid grid-cols-4 gap-3">
-            <a href="https://www.adidas.com/us" target="_blank" className=" flex flex-col gap-2 border-2 rounded-xl border-gray-200 justify-st p-4">
+            <a href="https://www.adidas.com/us" target="_blank" className=" flex flex-col gap-2 border-2 rounded-xl border-gray-200 justify-st p-4 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150">
               <img src={image21} alt="" />
               <p className=" text-red-500">3% of cashback</p>
               <p className="flex justify-between items-center">
@@ -192,7 +207,7 @@ const index = () => {
               </p>
             </a>
 
-            <a href="https://www.aboutyou.com/your-shop" target="_blank" className=" flex flex-col gap-2 border-2 rounded-xl border-gray-200 justify-start p-4">
+            <a href="https://www.aboutyou.com/your-shop" target="_blank" className=" flex flex-col gap-2 border-2 rounded-xl border-gray-200 justify-start p-4 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150">
               <img src={image22} alt="" />
               <p className=" text-red-500">3% of cashback</p>
               <p className="flex justify-between items-center">
@@ -226,7 +241,7 @@ const index = () => {
               </p>
             </a>
 
-            <a href="https://www.aldersportswear.com/" target="_blank" className=" flex flex-col gap-2 border-2 rounded-xl border-gray-200 justify-start p-4">
+            <a href="https://www.aldersportswear.com/" target="_blank" className=" flex flex-col gap-2 border-2 rounded-xl border-gray-200 justify-start p-4 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150">
               <img src={image23} alt="" />
               <p className=" text-red-500">3% of cashback</p>
               <p className="flex justify-between items-center">
@@ -260,7 +275,7 @@ const index = () => {
               </p>
             </a>
 
-            <a href="https://www.albamoda.de/" target="_blank" className=" flex flex-col gap-2 border-2 rounded-xl border-gray-200 justify-start p-4">
+            <a href="https://www.albamoda.de/" target="_blank" className=" flex flex-col gap-2 border-2 rounded-xl border-gray-200 justify-start p-4 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150">
               <img src={image24} alt="" />
               <p className=" text-red-500">3% of cashback</p>
               <p className="flex justify-between items-center">
@@ -294,7 +309,7 @@ const index = () => {
               </p>
             </a>
 
-            <a href="https://www.afbshop.de/" target="_blank" className=" flex flex-col gap-2 border-2 rounded-xl border-gray-200 justify-start p-4">
+            <a href="https://www.afbshop.de/" target="_blank" className=" flex flex-col gap-2 border-2 rounded-xl border-gray-200 justify-start p-4 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150">
               <img src={image25} alt="" />
               <p className=" text-red-500">3% of cashback</p>
               <p className="flex justify-between items-center">
@@ -328,7 +343,7 @@ const index = () => {
               </p>
             </a>
 
-            <a href="https://www.aldana.com.bh/" target="_blank" className=" flex flex-col gap-2 border-2 rounded-xl border-gray-200 justify-start p-4">
+            <a href="https://www.aldana.com.bh/" target="_blank" className=" flex flex-col gap-2 border-2 rounded-xl border-gray-200 justify-start p-4 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150">
               <img src={image26} alt="" />
               <p className=" text-red-500">3% of cashback</p>
               <p className="flex justify-between items-center">
@@ -362,7 +377,7 @@ const index = () => {
               </p>
             </a>
 
-            <a href="https://www.aeg.co.uk/" target="_blank" className=" flex flex-col gap-2 border-2 rounded-xl border-gray-200 justify-start p-4">
+            <a href="https://www.aeg.co.uk/" target="_blank" className=" flex flex-col gap-2 border-2 rounded-xl border-gray-200 justify-start p-4 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150">
               <img src={image27} alt="" />
               <p className=" text-red-500">3% of cashback</p>
               <p className="flex justify-between items-center">
@@ -396,7 +411,7 @@ const index = () => {
               </p>
             </a>
 
-            <a href="https://wwws.airfrance.fr/en" target="_blank" className=" flex flex-col gap-2 border-2 rounded-xl border-gray-200 justify-start p-4">
+            <a href="https://wwws.airfrance.fr/en" target="_blank" className=" flex flex-col gap-2 border-2 rounded-xl border-gray-200 justify-start p-4 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150">
               <img src={image28} alt="" />
               <p className=" text-red-500">3% of cashback</p>
               <p className="flex justify-between items-center">
@@ -437,10 +452,10 @@ const index = () => {
         <div className="flex flex-row justify-between p-10">
           <h1 className=" text-2xl font-bold">Blog</h1>
           <div className="flex flex-row gap-10">
-            <img src={icon1} alt="" className="w-[100%] h-[80%]" />
-            <img src={icon2} alt="" className="w-[100%] h-[80%]" />
-            <img src={icon3} alt="" className="w-[100%] h-[80%]" />
-            <img src={icon4} alt="" className="w-[100%] h-[80%]" />
+          <img src={icon1} alt="" className="w-[100%] h-[80%] cursor-pointer" />
+            <img src={icon2} alt="" className="w-[100%] h-[80%] cursor-pointer" />
+            <img src={icon3} alt="" className="w-[100%] h-[80%] cursor-pointer" />
+            <img src={icon4} alt="" className={open ? "w-[100%] h-[80%] cursor-pointer" : "w-[100%] h-[80%] cursor-pointer rotate-180"} onClick={handleCard}/>
           </div>
         </div>
 
@@ -475,10 +490,10 @@ const index = () => {
         <div className="flex flex-row justify-between ">
           <h1 className=" text-2xl font-bold">Cashback</h1>
           <div className="flex flex-row gap-10">
-            <img src={icon1} alt="" className="w-[100%] h-[80%]" />
-            <img src={icon2} alt="" className="w-[100%] h-[80%]" />
-            <img src={icon3} alt="" className="w-[100%] h-[80%]" />
-            <img src={icon4} alt="" className="w-[100%] h-[80%]" />
+          <img src={icon1} alt="" className="w-[100%] h-[80%] cursor-pointer" />
+            <img src={icon2} alt="" className="w-[100%] h-[80%] cursor-pointer" />
+            <img src={icon3} alt="" className="w-[100%] h-[80%] cursor-pointer" />
+            <img src={icon4} alt="" className={open ? "w-[100%] h-[80%] cursor-pointer" : "w-[100%] h-[80%] cursor-pointer rotate-180"} onClick={handleCard}/>
           </div>
         </div>
 

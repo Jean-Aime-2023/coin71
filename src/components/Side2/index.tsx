@@ -27,18 +27,24 @@ import search4 from '../../assets/image 33.png'
 import page1 from '../../assets/image 28-1.png'
 import page2 from '../../assets/image 29-1.png'
 
+import {useState} from 'react'
+
 
 const index = () => {
+  const [open,setOpen] = useState(false)
+  const handleCard=()=>{
+    setOpen(!open)
+  }
   return (
     <div className="flex flex-col gap-6 flex-1">
       <div className=" flex flex-col gap-3 card1 rounded-2xl">
         <div className="flex flex-row justify-between p-10">
           <h1 className=" text-2xl font-bold">Bookmarks</h1>
           <div className="flex flex-row gap-10">
-            <img src={icon1} alt="" className="w-[100%] h-[80%]" />
-            <img src={icon2} alt="" className="w-[100%] h-[80%]" />
-            <img src={icon3} alt="" className="w-[100%] h-[80%]" />
-            <img src={icon4} alt="" className="w-[100%] h-[80%]" />
+          <img src={icon1} alt="" className="w-[100%] h-[80%] cursor-pointer" />
+            <img src={icon2} alt="" className="w-[100%] h-[80%] cursor-pointer" />
+            <img src={icon3} alt="" className="w-[100%] h-[80%] cursor-pointer" />
+            <img src={icon4} alt="" className={open ? "w-[100%] h-[80%] cursor-pointer" : "w-[100%] h-[80%] cursor-pointer rotate-180"} onClick={handleCard}/>
           </div>
         </div>
 
@@ -79,10 +85,10 @@ const index = () => {
         <div className="flex flex-row justify-between p-10">
           <h1 className=" text-2xl font-bold">Apps</h1>
           <div className="flex flex-row gap-10">
-            <img src={icon1} alt="" className="w-[100%] h-[80%]" />
-            <img src={icon2} alt="" className="w-[100%] h-[80%]" />
-            <img src={icon3} alt="" className="w-[100%] h-[80%]" />
-            <img src={icon4} alt="" className="w-[100%] h-[80%]" />
+          <img src={icon1} alt="" className="w-[100%] h-[80%] cursor-pointer" />
+            <img src={icon2} alt="" className="w-[100%] h-[80%] cursor-pointer" />
+            <img src={icon3} alt="" className="w-[100%] h-[80%] cursor-pointer" />
+            <img src={icon4} alt="" className={open ? "w-[100%] h-[80%] cursor-pointer" : "w-[100%] h-[80%] cursor-pointer rotate-180"} onClick={handleCard}/>
           </div>
         </div>
 
@@ -113,10 +119,10 @@ const index = () => {
         <div className="flex flex-row justify-between p-10">
           <h1 className=" text-2xl font-bold">Blog</h1>
           <div className="flex flex-row gap-10">
-            <img src={icon1} alt="" className="w-[100%] h-[80%]" />
-            <img src={icon2} alt="" className="w-[100%] h-[80%]" />
-            <img src={icon3} alt="" className="w-[100%] h-[80%]" />
-            <img src={icon4} alt="" className="w-[100%] h-[80%]" />
+          <img src={icon1} alt="" className="w-[100%] h-[80%] cursor-pointer" />
+            <img src={icon2} alt="" className="w-[100%] h-[80%] cursor-pointer" />
+            <img src={icon3} alt="" className="w-[100%] h-[80%] cursor-pointer" />
+            <img src={icon4} alt="" className={open ? "w-[100%] h-[80%] cursor-pointer" : "w-[100%] h-[80%] cursor-pointer rotate-180"} onClick={handleCard}/>
           </div>
         </div>
 
@@ -151,10 +157,10 @@ const index = () => {
         <div className="flex flex-row justify-between p-10">
           <h1 className=" text-2xl font-bold">Apps</h1>
           <div className="flex flex-row gap-10">
-            <img src={icon1} alt="" className="w-[100%] h-[80%]" />
-            <img src={icon2} alt="" className="w-[100%] h-[80%]" />
-            <img src={icon3} alt="" className="w-[100%] h-[80%]" />
-            <img src={icon4} alt="" className="w-[100%] h-[80%]" />
+          <img src={icon1} alt="" className="w-[100%] h-[80%] cursor-pointer" />
+            <img src={icon2} alt="" className="w-[100%] h-[80%] cursor-pointer" />
+            <img src={icon3} alt="" className="w-[100%] h-[80%] cursor-pointer" />
+            <img src={icon4} alt="" className={open ? "w-[100%] h-[80%] cursor-pointer" : "w-[100%] h-[80%] cursor-pointer rotate-180"} onClick={handleCard}/>
           </div>
         </div>
 
@@ -185,10 +191,10 @@ const index = () => {
         <div className="flex flex-row justify-between p-10">
           <h1 className=" text-2xl font-bold">Blog</h1>
           <div className="flex flex-row gap-10">
-            <img src={icon1} alt="" className="w-[100%] h-[80%]" />
-            <img src={icon2} alt="" className="w-[100%] h-[80%]" />
-            <img src={icon3} alt="" className="w-[100%] h-[80%]" />
-            <img src={icon4} alt="" className="w-[100%] h-[80%]" />
+          <img src={icon1} alt="" className="w-[100%] h-[80%] cursor-pointer" />
+            <img src={icon2} alt="" className="w-[100%] h-[80%] cursor-pointer" />
+            <img src={icon3} alt="" className="w-[100%] h-[80%] cursor-pointer" />
+            <img src={icon4} alt="" className={open ? "w-[100%] h-[80%] cursor-pointer" : "w-[100%] h-[80%] cursor-pointer rotate-180"} onClick={handleCard}/>
           </div>
         </div>
 
