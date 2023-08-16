@@ -116,7 +116,7 @@ const index = () => {
           </div>
         </div>
 
-        <div className={open5 ? "hidden" : "grid grid-cols-4"}>
+        <div className={open5 ? "hidden" : "grid grid-cols-4 max-div:grid-cols-3"}>
         <a href="https://www.managemypain.net/" target="_blank" className="flex flex-col items-center text-center">
             <img src={app1} alt="" className="h-[4rem]" />
             <p>Manage My Pain</p>

@@ -10,6 +10,7 @@
 
 body{
   font-family: 'DM Sans', sans-serif;
+  width: 100vw;
 }
 
 .card1 {
@@ -54,27 +55,25 @@ a[aria-current="page"]{
   transform: scale(2, 2);
 }
 
-@media screen and (max-width:500px) {
-  body{
-    width: 140vw;
+@media screen and (max-width:1760px) {
+  .divs{
+    /* display: grid;
+    grid-template-columns: repeat(3,1fr); */
+    display: none;
   }
 }
 
-@media screen and (max-width:390px) {
+@media screen and (max-width:470px) {
   body{
-    width: 180vw;
+    overflow-x: hidden;
+    width: 120vw;
   }
 }
 
-@media screen and (max-width:1675px) {
+@media screen and (max-width:400px) {
   body{
-    width: 140vw;
-  }
-}
-
-@media screen and (max-width:370px) {
-  body{
-    width: 180vw;
+    overflow-x: hidden;
+    width: 130vw;
   }
 }
 

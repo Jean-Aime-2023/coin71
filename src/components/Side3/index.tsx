@@ -125,7 +125,7 @@ const index = () => {
 
       <div className=" flex flex-col gap-3 card1 rounded-3xl" data-aos="fade-up">
         <div className="flex flex-row justify-between px-10 py-7">
-          <h1 className=" text-2xl font-bold">Trending view chart</h1>
+          <h1 className=" text-2xl font-bold flex flex-row max-text:text-lg max-text:flex-wrap">Trending view chart</h1>
           <div className="flex flex-row gap-10">
           <img src={icon1} alt="" className="w-[100%] h-[80%] cursor-pointer" />
             <img src={icon2} alt="" className="w-[100%] h-[80%] cursor-pointer" />

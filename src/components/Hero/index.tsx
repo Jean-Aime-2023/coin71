@@ -23,10 +23,10 @@ const index = () => {
 
         <div className='absolute top-24 flex flex-col gap-4 items-center max-lg:top-10'>
         <div className='max-w-[1240px] mx-auto items-center flex gap-[50rem]' data-aos='fade-up'>
-           <input type="text" name="seach" id="search" placeholder='search' className='p-4 rounded-full w-[40rem] outline-none max-sm:w-[30rem]'/>
-           <img src={searchIcon} alt="" className='absolute left-[94%]'/>
+           <input type="text" name="seach" id="search" placeholder='search' className='py-4 px-7 max-res:w-[20rem] rounded-full w-[40rem] outline-none max-sm:w-[30rem]'/>
+           <img src={searchIcon} alt="" className='absolute left-[90%] max-res:left-[77%]'/>
         </div>
-        <div className='flex flex-row gap-8' data-aos='fade-up'>
+        <div className='grid grid-cols-5 gap-8 max-md:grid-cols-4 max-res:gap-3 max-res:grid-cols-3' data-aos='fade-up'>
             <a href='https://www.aliexpress.com/' target="_blank" className='bg-white h-[100%] p-2 rounded-xl flex flex-col justify-center items-center hover:scale-x-110 hover:scale-y-125 hover:transition ease-in-out delay-150'>
                <img src={brand1} alt="" className='h-7'/>
                <p className=' text-sm'>Ali Express</p>
@@ -54,9 +54,9 @@ const index = () => {
         </div>
         </div>
 
-        <div className='absolute right-32 top-36' data-aos='fade-up'>
+        <div className='absolute right-32 top-36 max-res:right-5 max-res:top-32' data-aos='fade-up'>
             <a href="/home">
-               <img src={logo} alt="" className='select'/>
+               <img src={logo} alt="" className='select '/>
             </a>
         </div>
     </div>

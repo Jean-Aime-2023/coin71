@@ -166,7 +166,7 @@ const index = () => {
           <div
             className={
               toggleState === 1 || toggleState === 3
-                ? "grid grid-cols-5 px-5 gap-4"
+                ? "grid grid-cols-5 px-5 gap-4 max-res:grid-cols-3"
                 : "hidden"
             }
           >
@@ -219,7 +219,7 @@ const index = () => {
           <div
             className={
               toggleState === 2 || toggleState === 4
-                ? "grid grid-cols-5 px-5 gap-4"
+                ? "grid grid-cols-5 px-5 gap-4 max-res:grid-cols-3"
                 : "hidden"
             }
           >
@@ -355,7 +355,7 @@ const index = () => {
             A <span>Top 8</span>
           </p></div>
           <div className={toggleSort === "a"?"flex":"hidden"}>
-          <div className="grid grid-cols-4 gap-3">
+          <div className="grid grid-cols-4 gap-3 max-div:grid-cols-3">
             <a
               href="https://www.adidas.com/us"
               target="_blank"
