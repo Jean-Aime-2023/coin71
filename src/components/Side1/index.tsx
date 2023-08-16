@@ -67,7 +67,7 @@ const index = () => {
       >
         <div className="flex flex-row justify-between">
           <h1 className=" text-2xl font-bold">Cashback</h1>
-          <div className="flex flex-row gap-10">
+          <div className="flex flex-row gap-3">
             <img
               src={icon1}
               alt=""
@@ -154,9 +154,107 @@ const index = () => {
         </div>
 
         <div className={open ? "hidden" : "flex flex-row"}>
+        <div
+            className={
+              toggleState === 1
+                ? "grid grid-cols-5 px-5 gap-4 max-res:grid-cols-4"
+                : "hidden"
+            }
+          >
+            <a
+              href="https://www.ikea.com/"
+              target="_blank"
+              className="flex flex-col gap-1 shadow-xl text-center justify-center items-center p-2 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150'"
+            >
+              <img src={image3} alt="" className="w-[100%] h-[50%]" />
+              <p className="text-sm px-3">Ikea</p>
+            </a>
+
+            <a
+              href="https://www.aliexpress.com/"
+              target="_blank"
+              className="flex flex-col gap-1 shadow-xl text-center justify-center items-center p-2 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150'"
+            >
+              <img src={brand1} alt="" className="w-[100%] h-[60%]" />
+              <p className="text-sm">AliExpress</p>
+            </a>
+
+            <a
+              href="https://www.ebay.com/"
+              target="_blank"
+              className="flex flex-col gap-1 shadow-xl text-center items-center justify-center p-2 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150'"
+            >
+              <img src={brand2} alt="" className="w-[100%] h-[30%]" />
+              <p className="text-sm">ebay</p>
+            </a>
+
+            <a
+              href="https://www.apple.com/"
+              target="_blank"
+              className="flex flex-col gap-1 shadow-xl text-center justify-center items-center p-2 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150'"
+            >
+              <img src={brand3} alt="" className="w-[50%] h-[40%]" />
+              <p className="text-sm">Apple</p>
+            </a>
+
+            <a
+              href="https://www.adidas.com/us"
+              target="_blank"
+              className="flex flex-col gap-1 shadow-xl text-center items-center justify-center p-2 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150"
+            >
+              <img src={brand4} alt="" className="w-[80%] h-[40%]" />
+              <p className="text-sm">Adidas</p>
+            </a>
+
+            <a
+              href="https://alibaba.com/"
+              target="_blank"
+              className="flex flex-col gap-1 shadow-xl text-center items-center justify-center p-2 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150'"
+            >
+              <img src={brand5} alt="" className="w-[80%] h-[50%]" />
+              <p className="text-sm">Alibaba</p>
+            </a>
+
+            <a
+              href="https://www2.hm.com/en_us/index.html"
+              target="_blank"
+              className="flex flex-col gap-1 shadow-xl text-center items-center justify-center p-2 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150"
+            >
+              <img src={brand6} alt="" className="w-[80%] h-[30%]" />
+              <p className="text-sm">H&M</p>
+            </a>
+
+            <a
+              href="https://www.walmart.com/"
+              target="_blank"
+              className="flex flex-col gap-1 shadow-xl text-center items-center justify-center p-2 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150"
+            >
+              <img src={brand7} alt="" className="w-[80%] h-[50%]" />
+              <p className="text-sm">Walmart</p>
+            </a>
+
+            <a
+              href="https://www.rakuten.com/"
+              target="_blank"
+              className="flex flex-col gap-1 shadow-xl text-center items-center justify-center p-2 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150"
+            >
+              <img src={brand8} alt="" className="w-[80%] h-[50%]" />
+              <p className="text-sm">Rakuten</p>
+            </a>
+
+            <a
+              href="https://www.amazon.com/"
+              target="_blank"
+              className="flex flex-col gap-1 shadow-xl text-center items-center justify-center p-2 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150"
+            >
+              <img src={brand9} alt="" className="w-[100%] h-[80%]" />
+              <p className="text-sm">Amazon</p>
+            </a>
+          </div>
+
           <div
             className={
-              toggleState === 1 || toggleState === 3
+              toggleState === 3
                 ? "grid grid-cols-5 px-5 gap-4 max-res:grid-cols-4"
                 : "hidden"
             }

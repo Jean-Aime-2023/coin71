@@ -38,11 +38,11 @@ const index = () => {
 
 
   return (
-    <div className="flex flex-col gap-6 flex-1 lg:grid max-lg:grid-cols-2 max:lg:w-[200vw]">
+    <div className="flex flex-col gap-6 flex-1 lg:grid max-lg:grid-cols-2 max:lg:w-[100vw]">
       <div className=" flex flex-col gap-3 card1 rounded-2xl" data-aos="fade-down">
         <div className="flex flex-row justify-between p-10">
           <h1 className=" text-2xl font-bold">Weather</h1>
-          <div className="flex flex-row gap-10">
+          <div className="flex flex-row gap-5">
           <img src={icon1} alt="" className="w-[100%] h-[80%] cursor-pointer" />
             <img src={icon2} alt="" className="w-[100%] h-[80%] cursor-pointer" />
             <img src={icon3} alt="" className="w-[100%] h-[80%] cursor-pointer" />

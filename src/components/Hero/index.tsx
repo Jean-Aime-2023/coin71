@@ -9,14 +9,14 @@ import group from '../../assets/Group 98.png'
 
 const index = () => {
   return (
-    <div className='flex flex-col gap-10 items-center relative'>
+    <div className='flex flex-col gap-4 items-center relative'>
         <div className='w-full h-[300px] bg-gray-700/90 relative'>
            <img className='w-full h-full object-cover mix-blend-overlay img' src={group} alt="" />
         </div>
         
 
-        <div className='absolute top-24 flex flex-col gap-4 items-center max-lg:top-10'>
-        <div className='max-w-[1240px] mx-auto items-center flex gap-[50rem]' data-aos='fade-up'>
+        <div className='absolute top-16 flex flex-col gap-2 items-center max-lg:top-3'>
+        <div className='max-w-[1240px] mx-2 items-center flex gap-[10rem]' data-aos='fade-up'>
            <input type="text" name="seach" id="search" placeholder='search' className='py-4 px-7 max-res:w-[20rem] rounded-full w-[40rem] outline-none max-sm:w-[30rem]'/>
            <img src={searchIcon} alt="" className='absolute left-[90%] max-res:left-[77%]'/>
         </div>
