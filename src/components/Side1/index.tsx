@@ -166,7 +166,7 @@ const index = () => {
           <div
             className={
               toggleState === 1 || toggleState === 3
-                ? "grid grid-cols-5 px-5 gap-4 max-res:grid-cols-3"
+                ? "grid grid-cols-5 px-5 gap-4 max-res:grid-cols-4"
                 : "hidden"
             }
           >
