@@ -31,6 +31,20 @@ body{
   height: 20%;
 }
 
+.content{
+  display: none;
+}
+
+.active-content{
+  display: block;
+}
+
+.active-tabs{
+  color: red;
+  border-bottom: 2px solid red;
+
+}
+
 a[aria-current="page"]{
   color: red;
   border-bottom: 2px solid red;

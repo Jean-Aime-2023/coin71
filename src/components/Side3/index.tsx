@@ -6,8 +6,6 @@ import icon2 from "../../assets/material-symbols_minimize.png";
 import icon3 from "../../assets/solar_copy-linear.png";
 import icon4 from "../../assets/uiw_down.png";
 
-import chart from "../../assets/image 39.png";
-
 import people from '../../assets/image 40.png'
 import people1 from '../../assets/image 41.png'
 import peopl2 from '../../assets/image 42.png'
@@ -136,7 +134,7 @@ const index = () => {
           </div>
         </div>
 
-        <div className={open11?"hidden":""}>
+        <div className={open11?"hidden":"bg-black rounded-xl"}>
           <Chart/>
         </div>
       </div>

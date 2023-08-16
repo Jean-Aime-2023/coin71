@@ -27,57 +27,123 @@ import blogIcon1 from "../../assets/image 28-2.png";
 import blogIcon2 from "../../assets/image 29-2.png";
 import blogIcon3 from "../../assets/image 30-2.png";
 
-import {useState} from 'react'
+import { useState } from "react";
 
-import { useEffect } from 'react'
-import Aos from 'aos'
-import 'aos/dist/aos.css'
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const index = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
 
-  useEffect(()=>{
-    Aos.init({duration:2000})
-  },[])
+  const [open, setOpen] = useState(false);
+  const [open1, setOpen1] = useState(false);
+  const [open3, setOpen3] = useState(false);
 
-  const [open,setOpen] = useState(false)
-  const [open1,setOpen1] = useState(false)
-  const [open3,setOpen3] = useState(false)
+  const handleCard = () => {
+    setOpen(!open);
+  };
 
-  const handleCard=()=>{
-    setOpen(!open)
-  }
+  const handleCard1 = () => {
+    setOpen1(!open1);
+  };
 
-  const handleCard1=()=>{
-    setOpen1(!open1)
-  }
+  const handleCard3 = () => {
+    setOpen3(!open3);
+  };
 
-  const handleCard3=()=>{
-    setOpen3(!open3)
-  }
+  const [toggleState, setToggleState] = useState(1);
+
+  const toggleTab = (index: number) => {
+    setToggleState(index);
+  };
+
+  const [toggleSort, setToggleSort] = useState("a");
+
+  const toggleOrder = (i: string) => {
+    setToggleSort(i);
+  };
 
   return (
     <div className="flex flex-col gap-6 flex-1">
-      <div className="flex flex-col gap-8 card1 p-10 rounded-2xl" data-aos="fade-down">
+      <div
+        className="flex flex-col gap-8 card1 p-10 rounded-2xl"
+        data-aos="fade-down"
+      >
         <div className="flex flex-row justify-between">
           <h1 className=" text-2xl font-bold">Cashback</h1>
           <div className="flex flex-row gap-10">
-            <img src={icon1} alt="" className="w-[100%] h-[80%] cursor-pointer" />
-            <img src={icon2} alt="" className="w-[100%] h-[80%] cursor-pointer" />
-            <img src={icon3} alt="" className="w-[100%] h-[80%] cursor-pointer" />
-            <img src={icon4} alt="" className={open ? "w-[100%] h-[80%] cursor-pointer" : "w-[100%] h-[80%] cursor-pointer rotate-180"} onClick={handleCard}/>
+            <img
+              src={icon1}
+              alt=""
+              className="w-[100%] h-[80%] cursor-pointer"
+            />
+            <img
+              src={icon2}
+              alt=""
+              className="w-[100%] h-[80%] cursor-pointer"
+            />
+            <img
+              src={icon3}
+              alt=""
+              className="w-[100%] h-[80%] cursor-pointer"
+            />
+            <img
+              src={icon4}
+              alt=""
+              className={
+                open
+                  ? "w-[100%] h-[80%] cursor-pointer"
+                  : "w-[100%] h-[80%] cursor-pointer rotate-180"
+              }
+              onClick={handleCard}
+            />
           </div>
         </div>
-        <div className={open ? 'hidden' : ' '}>
-          <li className="flex flex-row justify-between text-lg  ">
-            <a
-              href="#"
-              className=" text-red-600 border border-b-red-600 border-b-4 font-bold"
+        <div className={open ? "hidden" : " "}>
+          <li className="flex flex-row justify-between text-lg">
+            <div
+              className={
+                toggleState === 1
+                  ? "hover:text-red-500 cursor-pointer active-tabs"
+                  : "hover:text-red-500 cursor-pointer"
+              }
+              onClick={() => toggleTab(1)}
             >
               Shop
-            </a>
-            <a href="#" className="hover:text-red-500">Vouchers</a>
-            <a href="#" className="hover:text-red-500">My Order</a>
-            <a href="#" className="hover:text-red-500">My Favorite</a>
+            </div>
+            <div
+              className={
+                toggleState === 2
+                  ? "hover:text-red-500 cursor-pointer active-tabs"
+                  : "hover:text-red-500 cursor-pointer"
+              }
+              onClick={() => toggleTab(2)}
+            >
+              Vouchers
+            </div>
+            <div
+              className={
+                toggleState === 3
+                  ? "hover:text-red-500 cursor-pointer active-tabs"
+                  : "hover:text-red-500 cursor-pointer"
+              }
+              onClick={() => toggleTab(3)}
+            >
+              My Order
+            </div>
+            <div
+              className={
+                toggleState === 4
+                  ? "hover:text-red-500 cursor-pointer active-tabs"
+                  : "hover:text-red-500 cursor-pointer"
+              }
+              onClick={() => toggleTab(4)}
+            >
+              My Favorite
+            </div>
           </li>
         </div>
         <div className={open ? "hidden" : '"flex flex-col gap-1"'}>
@@ -96,96 +162,205 @@ const index = () => {
           <hr />
         </div>
 
-        <div className={open ? "hidden" : "grid grid-cols-5 px-5 gap-4"}>
-          <a href="https://www.ikea.com/" target="_blank" className="flex flex-col gap-1 shadow-xl text-center justify-center items-center p-2 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150'">
-            <img src={image3} alt="" className="w-[80%] h-[50%]" />
-            <p className="text-sm">Ikea</p>
-          </a>
+        <div className={open ? "hidden" : "flex flex-row"}>
+          <div
+            className={
+              toggleState === 1 || toggleState === 3
+                ? "grid grid-cols-5 px-5 gap-4"
+                : "hidden"
+            }
+          >
+            <a
+              href="https://www.ikea.com/"
+              target="_blank"
+              className="flex flex-col gap-1 shadow-xl text-center justify-center items-center p-2 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150'"
+            >
+              <img src={image3} alt="" className="w-[100%] h-[50%]" />
+              <p className="text-sm px-3">Ikea</p>
+            </a>
 
-          <a  href="https://www.aliexpress.com/" target="_blank" className="flex flex-col gap-1 shadow-xl text-center justify-center items-center p-2 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150'">
-            <img src={brand1} alt="" className="w-[80%] h-[30%]" />
-            <p className="text-sm">AliExpress</p>
-          </a>
+            <a
+              href="https://www.aliexpress.com/"
+              target="_blank"
+              className="flex flex-col gap-1 shadow-xl text-center justify-center items-center p-2 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150'"
+            >
+              <img src={brand1} alt="" className="w-[100%] h-[60%]" />
+              <p className="text-sm">AliExpress</p>
+            </a>
 
-          <a href="https://www.ebay.com/" target="_blank" className="flex flex-col gap-1 shadow-xl text-center items-center justify-center p-2 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150'">
-            <img src={brand2} alt="" className="w-[80%] h-[30%]" />
-            <p className="text-sm">ebay</p>
-          </a>
+            <a
+              href="https://www.ebay.com/"
+              target="_blank"
+              className="flex flex-col gap-1 shadow-xl text-center items-center justify-center p-2 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150'"
+            >
+              <img src={brand2} alt="" className="w-[100%] h-[30%]" />
+              <p className="text-sm">ebay</p>
+            </a>
 
-          <a href="https://www.apple.com/" target="_blank" className="flex flex-col gap-1 shadow-xl text-center justify-center items-center p-2 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150'">
-            <img src={brand3} alt="" className="w-[40%] h-[40%]" />
-            <p className="text-sm">Apple</p>
-          </a>
+            <a
+              href="https://www.apple.com/"
+              target="_blank"
+              className="flex flex-col gap-1 shadow-xl text-center justify-center items-center p-2 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150'"
+            >
+              <img src={brand3} alt="" className="w-[50%] h-[40%]" />
+              <p className="text-sm">Apple</p>
+            </a>
 
-          <a href="https://www.adidas.com/us" target="_blank" className="flex flex-col gap-1 shadow-xl text-center items-center justify-center p-2 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150">
-            <img src={brand4} alt="" className="w-[80%] h-[80%]" />
-            <p className="text-sm">Adidas</p>
-          </a>
+            <a
+              href="https://www.adidas.com/us"
+              target="_blank"
+              className="flex flex-col gap-1 shadow-xl text-center items-center justify-center p-2 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150"
+            >
+              <img src={brand4} alt="" className="w-[80%] h-[40%]" />
+              <p className="text-sm">Adidas</p>
+            </a>
+          </div>
 
-          <a href="https://alibaba.com/" target="_blank" className="flex flex-col gap-1 shadow-xl text-center items-center justify-center p-2 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150'">
-            <img src={brand5} alt="" className="w-[80%] h-[50%]" />
-            <p className="text-sm">Alibaba</p>
-          </a>
+          <div
+            className={
+              toggleState === 2 || toggleState === 4
+                ? "grid grid-cols-5 px-5 gap-4"
+                : "hidden"
+            }
+          >
+            <a
+              href="https://alibaba.com/"
+              target="_blank"
+              className="flex flex-col gap-1 shadow-xl text-center items-center justify-center p-2 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150'"
+            >
+              <img src={brand5} alt="" className="w-[80%] h-[50%]" />
+              <p className="text-sm">Alibaba</p>
+            </a>
 
-          <a href="https://www2.hm.com/en_us/index.html" target="_blank" className="flex flex-col gap-1 shadow-xl text-center items-center justify-center p-2 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150">
-            <img src={brand6} alt="" className="w-[80%] h-[30%]" />
-            <p className="text-sm">H&M</p>
-          </a>
+            <a
+              href="https://www2.hm.com/en_us/index.html"
+              target="_blank"
+              className="flex flex-col gap-1 shadow-xl text-center items-center justify-center p-2 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150"
+            >
+              <img src={brand6} alt="" className="w-[80%] h-[30%]" />
+              <p className="text-sm">H&M</p>
+            </a>
 
-          <a href="https://www.walmart.com/" target="_blank" className="flex flex-col gap-1 shadow-xl text-center items-center justify-center p-2 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150">
-            <img src={brand7} alt="" className="w-[80%] h-[50%]" />
-            <p className="text-sm">Walmart</p>
-          </a>
+            <a
+              href="https://www.walmart.com/"
+              target="_blank"
+              className="flex flex-col gap-1 shadow-xl text-center items-center justify-center p-2 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150"
+            >
+              <img src={brand7} alt="" className="w-[80%] h-[50%]" />
+              <p className="text-sm">Walmart</p>
+            </a>
 
-          <a href="https://www.rakuten.com/" target="_blank" className="flex flex-col gap-1 shadow-xl text-center items-center justify-center p-2 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150">
-            <img src={brand8} alt="" className="w-[80%] h-[50%]" />
-            <p className="text-sm">Rakuten</p>
-          </a>
+            <a
+              href="https://www.rakuten.com/"
+              target="_blank"
+              className="flex flex-col gap-1 shadow-xl text-center items-center justify-center p-2 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150"
+            >
+              <img src={brand8} alt="" className="w-[80%] h-[50%]" />
+              <p className="text-sm">Rakuten</p>
+            </a>
 
-          <a href="https://www.amazon.com/" target="_blank" className="flex flex-col gap-1 shadow-xl text-center items-center justify-center p-2 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150">
-            <img src={brand9} alt="" className="w-[100%] h-[80%]" />
-            <p className="text-sm">Amazon</p>
-          </a>
+            <a
+              href="https://www.amazon.com/"
+              target="_blank"
+              className="flex flex-col gap-1 shadow-xl text-center items-center justify-center p-2 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150"
+            >
+              <img src={brand9} alt="" className="w-[100%] h-[80%]" />
+              <p className="text-sm">Amazon</p>
+            </a>
+          </div>
         </div>
 
         <li className={open ? "hidden" : "flex justify-between"}>
-          <a
-            href="#"
-            className="text-red-500 border border-b-red-500 border-b-4"
-          >
+          <div className={toggleSort==="a"?"hover:text-red-500 active-tabs cursor-pointer":""} onClick={()=>toggleOrder("a")}>
             A
-          </a>
-          <a href="" className="hover:text-red-500">B</a>
-          <a href="" className="hover:text-red-500">C</a>
-          <a href="" className="hover:text-red-500">D</a>
-          <a href="" className="hover:text-red-500">E</a>
-          <a href="" className="hover:text-red-500">F</a>
-          <a href="" className="hover:text-red-500">G</a>
-          <a href="" className="hover:text-red-500">H</a>
-          <a href="" className="hover:text-red-500">I</a>J<a href="" className="hover:text-red-500">K</a>
-          <a href="" className="hover:text-red-500">L</a>
-          <a href="" className="hover:text-red-500">M</a>
-          <a href="" className="hover:text-red-500">N</a>
-          <a href="" className="hover:text-red-500">O</a>
-          <a href="" className="hover:text-red-500">P</a>
-          <a href="" className="hover:text-red-500">Q</a>
-          <a href="" className="hover:text-red-500">R</a>
-          <a href="" className="hover:text-red-500">S</a>
-          <a href="" className="hover:text-red-500">T</a>
-          <a href="" className="hover:text-red-500">U</a>
-          <a href="" className="hover:text-red-500">V</a>
-          <a href="" className="hover:text-red-500">W</a>
-          <a href="" className="hover:text-red-500">X</a>
-          <a href="" className="hover:text-red-500">Y</a>
-          <a href="" className="hover:text-red-500">z</a>
+          </div>
+          <div className="hover:text-red-500 cursor-pointer" onClick={()=>toggleOrder("b")}>
+            B
+          </div>
+          <div className="hover:text-red-500 cursor-pointer" onClick={()=>toggleOrder("c")}>
+            C
+          </div>
+          <div className="hover:text-red-500 cursor-pointer" onClick={()=>toggleOrder("d")}>
+            D
+          </div>
+          <div className="hover:text-red-500 cursor-pointer" onClick={()=>toggleOrder("e")}>
+            E
+          </div>
+          <div className="hover:text-red-500 cursor-pointer" onClick={()=>toggleOrder("f")}>
+            F
+          </div>
+          <div className="hover:text-red-500 cursor-pointer" onClick={()=>toggleOrder("g")}>
+            G
+          </div>
+          <div className="hover:text-red-500 cursor-pointer" onClick={()=>toggleOrder("h")}>
+            H
+          </div>
+          <div className="hover:text-red-500 cursor-pointer" onClick={()=>toggleOrder("i")}>
+            I
+          </div>
+          J
+          <div className="hover:text-red-500 cursor-pointer" onClick={()=>toggleOrder("k")}>
+            K
+          </div>
+          <div className="hover:text-red-500 cursor-pointer" onClick={()=>toggleOrder("l")}>
+            L
+          </div>
+          <div className="hover:text-red-500 cursor-pointer" onClick={()=>toggleOrder("m")}>
+            M
+          </div>
+          <div className="hover:text-red-500 cursor-pointer" onClick={()=>toggleOrder("n")}>
+            N
+          </div>
+          <div className="hover:text-red-500 cursor-pointer" onClick={()=>toggleOrder("o")}>
+            O
+          </div>
+          <div className="hover:text-red-500 cursor-pointer" onClick={()=>toggleOrder("p")}>
+            P
+          </div>
+          <div className="hover:text-red-500 cursor-pointer" onClick={()=>toggleOrder("q")}>
+            Q
+          </div>
+          <div className="hover:text-red-500 cursor-pointer" onClick={()=>toggleOrder("r")}>
+            R
+          </div>
+          <div className="hover:text-red-500 cursor-pointer" onClick={()=>toggleOrder("s")}>
+            S
+          </div>
+          <div className="hover:text-red-500 cursor-pointer" onClick={()=>toggleOrder("t")}>
+            T
+          </div>
+          <div className="hover:text-red-500 cursor-pointer" onClick={()=>toggleOrder("u")}>
+            U
+          </div>
+          <div className="hover:text-red-500 cursor-pointer" onClick={()=>toggleOrder("v")}>
+            V
+          </div>
+          <div className="hover:text-red-500 cursor-pointer" onClick={()=>toggleOrder("w")}>
+            W
+          </div>
+          <div className="hover:text-red-500 cursor-pointer" onClick={()=>toggleOrder("x")}>
+            X
+          </div>
+          <div className="hover:text-red-500 cursor-pointer" onClick={()=>toggleOrder("y")}>
+            Y
+          </div>
+          <div className="hover:text-red-500 cursor-pointer" onClick={()=>toggleOrder("z")}>
+            z
+          </div>
+
         </li>
 
         <div className={open ? "hidden" : "flex flex-col gap-2"}>
-          <p>
+          <div className={!(toggleSort==="a")?"hidden":"flex"}><p>
             A <span>Top 8</span>
-          </p>
+          </p></div>
+          <div className={toggleSort === "a"?"flex":"hidden"}>
           <div className="grid grid-cols-4 gap-3">
-            <a href="https://www.adidas.com/us" target="_blank" className=" flex flex-col gap-2 border-2 rounded-xl border-gray-200 justify-st p-4 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150">
+            <a
+              href="https://www.adidas.com/us"
+              target="_blank"
+              className=" flex flex-col gap-2 border-2 rounded-xl border-gray-200 justify-st p-4 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150"
+            >
               <img src={image21} alt="" />
               <p className=" text-red-500">3% of cashback</p>
               <p className="flex justify-between items-center">
@@ -219,7 +394,11 @@ const index = () => {
               </p>
             </a>
 
-            <a href="https://www.aboutyou.com/your-shop" target="_blank" className=" flex flex-col gap-2 border-2 rounded-xl border-gray-200 justify-start p-4 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150">
+            <a
+              href="https://www.aboutyou.com/your-shop"
+              target="_blank"
+              className=" flex flex-col gap-2 border-2 rounded-xl border-gray-200 justify-start p-4 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150"
+            >
               <img src={image22} alt="" />
               <p className=" text-red-500">3% of cashback</p>
               <p className="flex justify-between items-center">
@@ -253,7 +432,11 @@ const index = () => {
               </p>
             </a>
 
-            <a href="https://www.aldersportswear.com/" target="_blank" className=" flex flex-col gap-2 border-2 rounded-xl border-gray-200 justify-start p-4 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150">
+            <a
+              href="https://www.aldersportswear.com/"
+              target="_blank"
+              className=" flex flex-col gap-2 border-2 rounded-xl border-gray-200 justify-start p-4 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150"
+            >
               <img src={image23} alt="" />
               <p className=" text-red-500">3% of cashback</p>
               <p className="flex justify-between items-center">
@@ -287,7 +470,11 @@ const index = () => {
               </p>
             </a>
 
-            <a href="https://www.albamoda.de/" target="_blank" className=" flex flex-col gap-2 border-2 rounded-xl border-gray-200 justify-start p-4 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150">
+            <a
+              href="https://www.albamoda.de/"
+              target="_blank"
+              className=" flex flex-col gap-2 border-2 rounded-xl border-gray-200 justify-start p-4 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150"
+            >
               <img src={image24} alt="" />
               <p className=" text-red-500">3% of cashback</p>
               <p className="flex justify-between items-center">
@@ -321,11 +508,15 @@ const index = () => {
               </p>
             </a>
 
-            <a href="https://www.afbshop.de/" target="_blank" className=" flex flex-col gap-2 border-2 rounded-xl border-gray-200 justify-start p-4 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150">
+            <a
+              href="https://www.afbshop.de/"
+              target="_blank"
+              className=" flex flex-col gap-2 border-2 rounded-xl border-gray-200 justify-start p-4 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150"
+            >
               <img src={image25} alt="" />
               <p className=" text-red-500">3% of cashback</p>
               <p className="flex justify-between items-center">
-              AFB Shop{" "}
+                AFB Shop{" "}
                 <span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -355,11 +546,15 @@ const index = () => {
               </p>
             </a>
 
-            <a href="https://www.aldana.com.bh/" target="_blank" className=" flex flex-col gap-2 border-2 rounded-xl border-gray-200 justify-start p-4 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150">
+            <a
+              href="https://www.aldana.com.bh/"
+              target="_blank"
+              className=" flex flex-col gap-2 border-2 rounded-xl border-gray-200 justify-start p-4 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150"
+            >
               <img src={image26} alt="" />
               <p className=" text-red-500">3% of cashback</p>
               <p className="flex justify-between items-center">
-              Al Dana{" "}
+                Al Dana{" "}
                 <span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -389,11 +584,15 @@ const index = () => {
               </p>
             </a>
 
-            <a href="https://www.aeg.co.uk/" target="_blank" className=" flex flex-col gap-2 border-2 rounded-xl border-gray-200 justify-start p-4 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150">
+            <a
+              href="https://www.aeg.co.uk/"
+              target="_blank"
+              className=" flex flex-col gap-2 border-2 rounded-xl border-gray-200 justify-start p-4 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150"
+            >
               <img src={image27} alt="" />
               <p className=" text-red-500">3% of cashback</p>
               <p className="flex justify-between items-center">
-              AEG{" "}
+                AEG{" "}
                 <span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -423,11 +622,15 @@ const index = () => {
               </p>
             </a>
 
-            <a href="https://wwws.airfrance.fr/en" target="_blank" className=" flex flex-col gap-2 border-2 rounded-xl border-gray-200 justify-start p-4 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150">
+            <a
+              href="https://wwws.airfrance.fr/en"
+              target="_blank"
+              className=" flex flex-col gap-2 border-2 rounded-xl border-gray-200 justify-start p-4 hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150"
+            >
               <img src={image28} alt="" />
               <p className=" text-red-500">3% of cashback</p>
               <p className="flex justify-between items-center">
-              Air France{" "}
+                Air France{" "}
                 <span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -457,22 +660,52 @@ const index = () => {
               </p>
             </a>
           </div>
+          </div>
+          <div className={!(toggleSort==="a")?"flex flex-coltext-black":"hidden"}><p>Nothing here</p></div>
         </div>
       </div>
 
-      <div className=" flex flex-col gap-3 card1 rounded-2xl" data-aos="fade-up">
+      <div
+        className=" flex flex-col gap-3 card1 rounded-2xl"
+        data-aos="fade-up"
+      >
         <div className="flex flex-row justify-between p-10">
           <h1 className=" text-2xl font-bold">Blog</h1>
           <div className="flex flex-row gap-10">
-          <img src={icon1} alt="" className="w-[100%] h-[80%] cursor-pointer" />
-            <img src={icon2} alt="" className="w-[100%] h-[80%] cursor-pointer" />
-            <img src={icon3} alt="" className="w-[100%] h-[80%] cursor-pointer" />
-            <img src={icon4} alt="" className={open1 ? "w-[100%] h-[80%] cursor-pointer" : "w-[100%] h-[80%] cursor-pointer rotate-180"} onClick={handleCard1}/>
+            <img
+              src={icon1}
+              alt=""
+              className="w-[100%] h-[80%] cursor-pointer"
+            />
+            <img
+              src={icon2}
+              alt=""
+              className="w-[100%] h-[80%] cursor-pointer"
+            />
+            <img
+              src={icon3}
+              alt=""
+              className="w-[100%] h-[80%] cursor-pointer"
+            />
+            <img
+              src={icon4}
+              alt=""
+              className={
+                open1
+                  ? "w-[100%] h-[80%] cursor-pointer"
+                  : "w-[100%] h-[80%] cursor-pointer rotate-180"
+              }
+              onClick={handleCard1}
+            />
           </div>
         </div>
 
         <div className={open1 ? "hidden" : "flex flex-col gap-3"}>
-          <a href="https://www.blog-search.com/" target="_blank" className="flex flex-row gap-3 px-10 text-lg">
+          <a
+            href="https://www.blog-search.com/"
+            target="_blank"
+            className="flex flex-row gap-3 px-10 text-lg"
+          >
             <img src={blogIcon1} alt="" className=" w-[12%]" />
             <div className="flex flex-col">
               <h3 className="font-bold">Blog Search</h3>
@@ -480,7 +713,11 @@ const index = () => {
             </div>
           </a>
           <hr />
-          <a href="themesile.com/blog" target="_blank" className="flex flex-row gap-3 px-10 text-lg">
+          <a
+            href="themesile.com/blog"
+            target="_blank"
+            className="flex flex-row gap-3 px-10 text-lg"
+          >
             <img src={blogIcon2} alt="" className=" w-[12%]" />
             <div className="flex flex-col">
               <h3 className="font-bold">Themesile</h3>
@@ -488,7 +725,11 @@ const index = () => {
             </div>
           </a>
           <hr />
-          <a href="https://blog.hubspot.com/" target="_blank" className="flex flex-row gap-3 px-10 text-lg pb-6">
+          <a
+            href="https://blog.hubspot.com/"
+            target="_blank"
+            className="flex flex-row gap-3 px-10 text-lg pb-6"
+          >
             <img src={blogIcon3} alt="" className=" w-[12%]" />
             <div className="flex flex-col">
               <h3 className="font-bold">HubSpot</h3>
@@ -498,29 +739,52 @@ const index = () => {
         </div>
       </div>
 
-      <div className=" flex flex-col card2 rounded-2xl p-10 gap-7" data-aos="fade-up">
+      <div
+        className=" flex flex-col card2 rounded-2xl p-10 gap-7"
+        data-aos="fade-up"
+      >
         <div className="flex flex-row justify-between ">
-          <h1 className=" text-2xl font-bold">Cashback</h1>
+          <h1 className=" text-2xl font-bold">Notizen</h1>
           <div className="flex flex-row gap-10">
-          <img src={icon1} alt="" className="w-[100%] h-[80%] cursor-pointer" />
-            <img src={icon2} alt="" className="w-[100%] h-[80%] cursor-pointer" />
-            <img src={icon3} alt="" className="w-[100%] h-[80%] cursor-pointer" />
-            <img src={icon4} alt="" className={open3 ? "w-[100%] h-[80%] cursor-pointer" : "w-[100%] h-[80%] cursor-pointer rotate-180"} onClick={handleCard3}/>
+            <img
+              src={icon1}
+              alt=""
+              className="w-[100%] h-[80%] cursor-pointer"
+            />
+            <img
+              src={icon2}
+              alt=""
+              className="w-[100%] h-[80%] cursor-pointer"
+            />
+            <img
+              src={icon3}
+              alt=""
+              className="w-[100%] h-[80%] cursor-pointer"
+            />
+            <img
+              src={icon4}
+              alt=""
+              className={
+                open3
+                  ? "w-[100%] h-[80%] cursor-pointer"
+                  : "w-[100%] h-[80%] cursor-pointer rotate-180"
+              }
+              onClick={handleCard3}
+            />
           </div>
         </div>
 
         <div className={open3 ? "hidden" : "flex flex-col gap-5"}>
           <ul className="flex flex-row gap-7">
             <li>
-              <a
-                href="#"
-                className="text-red-500 border border-b-4 border-b-red-500"
+              <div
+                className="cursor-pointer text-red-500 active-tabs"
               >
                 Notiz
-              </a>
+              </div>
             </li>
             <li>
-              <a href="#">Neue Notiz</a>
+              <div className="cursor-pointer hover:text-red-500">Neue Notiz</div>
             </li>
           </ul>
 

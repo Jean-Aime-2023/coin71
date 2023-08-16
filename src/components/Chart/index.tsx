@@ -153,7 +153,6 @@ const Index: React.FC = () => {
           height: 400,
           type: 'candlestick',
           background: "#000",
-          borderRadius: 10,
         },
         title: {
           text: 'CandleStick Chart',
@@ -171,7 +170,7 @@ const Index: React.FC = () => {
                   color: '#fff',
                 },
                 orientation: 'horizontal',
-                offsetY: 7,
+                offsetY: 7,        
                 text: 'Annotation Test',
               },
             },
@@ -203,7 +202,8 @@ const Index: React.FC = () => {
         options={state.options}
         series={state.series}
         type="candlestick"
-        height={350}
+        height={450}
+        borderRadius={10}
       />
     </div>
   );
