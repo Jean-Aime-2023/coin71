@@ -6,14 +6,8 @@ import brand4 from '../../assets/image 21.png'
 import brand5 from '../../assets/image 10.png'
 import searchIcon from '../../assets/ri_search-2-line.png'
 import group from '../../assets/Group 98.png'
-import { useEffect } from 'react'
-import Aos from 'aos'
-import 'aos/dist/aos.css'
 
 const index = () => {
-   useEffect(()=>{
-      Aos.init({duration:2000})
-    },[])
   return (
     <div className='flex flex-col gap-10 items-center relative'>
         <div className='w-full h-[300px] bg-gray-700/90 relative'>

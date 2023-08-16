@@ -14,10 +14,6 @@ import Chart from '../Chart'
 
 import {useState} from 'react'
 
-import { useEffect } from "react";
-
-import Aos from 'aos'
-import 'aos/dist/aos.css'
 
 const index = () => {
   const [open9,setOpen9] = useState(false)
@@ -40,9 +36,6 @@ const index = () => {
     setOpen12(!open12)
   }
 
-  useEffect(()=>{
-    Aos.init({duration:2000})
-  },[])
 
   return (
     <div className="flex flex-col gap-6 flex-1 lg:grid max-lg:grid-cols-2 max:lg:w-[200vw]">

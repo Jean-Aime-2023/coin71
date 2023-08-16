@@ -203,7 +203,6 @@ const Index: React.FC = () => {
         series={state.series}
         type="candlestick"
         height={450}
-        borderRadius={10}
       />
     </div>
   );

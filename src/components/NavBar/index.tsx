@@ -1,16 +1,8 @@
 import profileImg from "../../assets/profile.jpeg";
 import addIcon from '../../assets/ic_baseline-plus.png'
-import { useEffect } from "react";
-
-import Aos from 'aos'
-import 'aos/dist/aos.css'
-
 
 const NavBar = () => {
 
-  useEffect(()=>{
-    Aos.init({duration:2000})
-  },[])
 
   return (
     <div className="h-[70px] w-[100%] text-white px-12 py-3 justify-between flex flex-row"> 

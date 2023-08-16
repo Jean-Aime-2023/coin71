@@ -24,10 +24,10 @@ const index: React.FC = () => {
 
   return (
     <>
-      <div className="flex flex-col gap-14 justify-center">
+      <div className="flex flex-col gap-14 justify-center overflow-x-hidden">
         {/* navbar */}
-        <div className="w-[96%] shadow-2xl flex flex-row justify-between p-3 rounded-full mx-9 max-md:mx-3 text-center items-center my-6">
-          <img src={logo} alt="" />
+        <div className="w-[96%] shadow-2xl flex flex-row justify-between p-3 rounded-full fixed top-2 left-3 items-center z-30 bg-white">
+          <a href="#"><img src={logo} alt="" className="cursor-pointer"/></a>
           <ul className="flex flex-row gap-10 max-md:hidden">
             <li>
               <a href="/" className="hover:text-red-500">
@@ -56,7 +56,7 @@ const index: React.FC = () => {
             </li>
           </ul>
           <div className="cursor-pointer">
-            <p
+          <p
               className="flex flex-row items-center"
               onClick={() => setShowMyModal(true)}
             >
@@ -70,11 +70,10 @@ const index: React.FC = () => {
 
         {/* categories */}
 
-        <div className="xl:mx-[8rem] flex flex-col gap-10 sm:mx-[6rem] max-sm:mx-6 max-lg:text-sm max-md:text-xs">
+        <div className="xl:mx-[8rem] flex flex-col gap-10 sm:mx-[6rem] max-sm:mx-6 max-lg:text-sm max-md:text-xs mt-[8rem]">
           <Accordion
             title="20% RABATT"
             desc="Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.Lorem Ipsum is simply dummy text of the printing and typesetting
             industry."
             button="Gutschein Anzeigen"
             smalltext="Gultig bis: 23.08.22023"
@@ -86,7 +85,6 @@ const index: React.FC = () => {
           <Accordion
             title="20% RABATT"
             desc="Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.Lorem Ipsum is simply dummy text of the printing and typesetting
             industry."
             button="Gutschein Anzeigen"
             smalltext="Gultig bis: 23.08.22023"
@@ -98,7 +96,6 @@ const index: React.FC = () => {
           <Accordion
             title="20% RABATT"
             desc="Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.Lorem Ipsum is simply dummy text of the printing and typesetting
             industry."
             button="Gutschein Anzeigen"
             smalltext="Gultig bis: 23.08.22023"
@@ -110,7 +107,6 @@ const index: React.FC = () => {
           <Accordion
             title="20% RABATT"
             desc="Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.Lorem Ipsum is simply dummy text of the printing and typesetting
             industry."
             button="Gutschein Anzeigen"
             smalltext="Gultig bis: 23.08.22023"
@@ -118,6 +114,8 @@ const index: React.FC = () => {
             list2="Gultig Bis: 27.08.2023"
             list3="Git Fur:Lorem Ipsum is simply dummy text of the printing and typesetting industry.%"
           />
+
+          
         </div>
       </div>
       {/*  modal */}

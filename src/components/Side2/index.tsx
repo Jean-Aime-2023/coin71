@@ -29,9 +29,6 @@ import page2 from '../../assets/image 29-1.png'
 
 import {useState} from 'react'
 
-import { useEffect } from 'react'
-import Aos from 'aos'
-import 'aos/dist/aos.css'
 
 const index = () => {
   const [open4,setOpen4] = useState(false)
