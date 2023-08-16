@@ -9,3 +9,7 @@ a{
 button{
     @apply hover:scale-x-110 hover:scale-y-110 hover:transition ease-in-out delay-150
 }
+
+body{
+    @apply overflow-x-hidden
+}
