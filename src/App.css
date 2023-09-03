@@ -12,7 +12,27 @@ body{
   font-family: 'DM Sans', sans-serif;
   width: 100vw;
   overflow-x: hidden;
+  height: 100vh;
 }
+
+li{cursor: pointer;}
+
+.activeAllTab{
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+contents1{
+  display: none;
+}
+
+.activeAllContent{
+  display: flex;
+}
+
+/* ::-webkit-scrollbar{
+  display: none;
+} */
 
 /* Style for the select element */
 select {
@@ -63,7 +83,6 @@ option {
 .active-tabs{
   color: red;
   border-bottom: 2px solid red;
-
 }
 
 a[aria-current="page"]{

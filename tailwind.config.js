@@ -10,7 +10,9 @@ export default {
       'text' : '1694px',
       'res':'477px',
       'fit':'500px',
-      'menu':'930px'
+      'menu':'930px',
+      'cols':'1150px',
+      'ov-md':'795px'
     }},
     
   },

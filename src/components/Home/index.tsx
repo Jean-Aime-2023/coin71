@@ -28,12 +28,6 @@ const index: React.FC = () => {
     setMenu(!menu);
   };
 
-  const [closeMenu, setCloseMenu] = useState(false);
-
-  const toggleCloseMenu = () => {
-    setCloseMenu(true);
-  };
-
   const toggleCloseMenu1 = () => {
     setMenu(false);
   };
@@ -74,8 +68,8 @@ const index: React.FC = () => {
             </li>
           </ul>
 
-      <div className="max-menu:flex menu:hidden" onClick={toggleMenu}>
-        <svg
+      <div className="max-menu:flex menu:hidden ml-[46%] cursor-pointer" onClick={toggleMenu}>
+      <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"
           height="16"
@@ -157,7 +151,11 @@ const index: React.FC = () => {
 
         {/* categories */}
 
-        <div className="xl:mx-[8rem] flex flex-col gap-10 sm:mx-[6rem] max-sm:mx-6 max-lg:text-sm max-md:text-xs mt-[8rem]">
+        <div className="xl:mx-[8rem] flex flex-col gap-10 justify-center sm:mx-[6rem] max-sm:mx-6 max-lg:text-sm max-md:text-xs mt-[8rem]">
+          <div className="flex flex-col justify-center items-center">
+            <h1 className="text-5xl font-medium max-md:text-xl">Gutscheincods - Juni 20223</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto at placeat laborum nam a</p>
+          </div>
           <Accordion
             title="20% RABATT"
             desc="Lorem Ipsum is simply dummy text of the printing and typesetting
