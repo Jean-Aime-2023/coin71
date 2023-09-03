@@ -18,7 +18,7 @@ const index = () => {
         />
       </div>
 
-      <div className="grid grid-rows-2 gap-2 items-center absolute top-24 max-cols:top-[30%] max-md:top-24">
+      <div className="grid grid-rows-2 gap-6 items-center absolute top-24 max-cols:top-[30%] max-res:gap-0 max-res:top-24 max-md:top-[10rem]">
         <div
           className="max-w-[1240px] mx-2 items-center flex gap-[10rem]"
           data-aos="fade-up"
@@ -39,7 +39,7 @@ const index = () => {
 
 
         <div
-          className="grid grid-cols-5 gap-8 max-res:gap-3 max-res:grid-cols-3 px-4 max-md:grid-cols-4"
+          className="grid grid-cols-5 gap-8 max-res:gap-3 max-res:grid-cols-3 px-4 max-md:grid-cols-5 max-md:gap-2"
           data-aos="fade-up"
         >
           <a
@@ -90,11 +90,11 @@ const index = () => {
       </div>
 
       <div
-        className="absolute right-32 top-36 max-cols:top-14 max-cols:right-[42%] max-md:top-0 max-md:right-[30%] max-ov-md:top-0"
+        className="absolute right-32 top-36 max-cols:top-14 max-cols:right-[42%] max-md:top-0 max-md:right-[35%] max-ov-md:top-0"
         data-aos="fade-up"
       >
         <a href="/home">
-          <img src={logo} alt="" className="select " />
+          <img src={logo} alt="" className="select" />
         </a>
       </div>
     </div>

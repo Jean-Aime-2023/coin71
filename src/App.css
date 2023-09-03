@@ -15,6 +15,20 @@ body{
   height: 100vh;
 }
 
+::-webkit-scrollbar{
+  background: white;
+  width: 5px;
+  border-radius: 50px;
+}
+
+
+::-webkit-scrollbar-thumb{
+  background: grey;
+  border-radius: 50px;
+}
+
+
+
 li{cursor: pointer;}
 
 .activeAllTab{

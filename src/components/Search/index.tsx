@@ -16,9 +16,9 @@ const index = () => {
   return (
 <div className=" flex flex-col gap-3 card1 rounded-2xl" data-aos="fade-up">
         <div className="flex flex-row justify-between p-10">
-          <h1 className=" text-2xl font-bold">Advanced Seacrh</h1>
+          <h1 className=" text-2xl font-bold max-sm:text-lg">Advanced Search</h1>
           <div className="flex flex-row gap-10">
-          <img src={icon1} alt="" className="w-[100%] h-[80%] cursor-pointer" />
+            <img src={icon1} alt="" className="w-[100%] h-[80%] cursor-pointer max-sm:w-[20px] max-sm:h-[20px]" />
             <img src={icon2} alt="" className="w-[100%] h-[80%] cursor-pointer" />
             <img src={icon3} alt="" className="w-[100%] h-[80%] cursor-pointer" />
             <img src={icon4} alt="" className={open7 ? "w-[100%] h-[80%] cursor-pointer" : "w-[100%] h-[80%] cursor-pointer rotate-180"} onClick={handleCard7}/>

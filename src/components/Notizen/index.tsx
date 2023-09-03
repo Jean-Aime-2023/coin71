@@ -11,12 +11,12 @@ const index = () => {
   };
   
   return (
-    <div
+      <div
         className=" flex flex-col card2 rounded-2xl p-10 gap-7"
         data-aos="fade-up"
       >
         <div className="flex flex-row justify-between ">
-          <h1 className=" text-2xl font-bold">Notizen</h1>
+          <h1 className=" text-2xl font-bold max-md:text-[1.2rem]">Notizen</h1>
           <div className="flex flex-row gap-10">
             <img
               src={icon1}

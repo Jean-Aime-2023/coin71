@@ -50,7 +50,7 @@ const index = () => {
     data-aos="fade-down"
   >
     <div className="flex flex-row justify-between">
-      <h1 className=" text-2xl font-bold">Cashback</h1>
+      <h1 className=" text-2xl font-bold max-md:text-[1.2rem]">Cashback</h1>
       <div className="flex flex-row gap-3">
         <img
           src={icon1}
@@ -141,7 +141,7 @@ const index = () => {
     <div
         className={
           toggleState === 1
-            ? "grid grid-cols-5 px-5 gap-4 max-res:grid-cols-4"
+            ? "grid grid-cols-5 px-5 gap-4 max-res:grid-cols-3"
             : "hidden"
         }
       >
@@ -430,7 +430,7 @@ const index = () => {
         A <span>Top 8</span>
       </p></div>
       <div className={toggleSort === "a"?"flex":"hidden"}>
-      <div className="grid grid-cols-4 gap-3 max-div:grid-cols-4 max-md:grid-cols-3">
+      <div className="grid grid-cols-4 gap-3 max-div:grid-cols-4 max-md:grid-cols-4 max-sm:grid-cols-3 max-res:grid-cols-2">
         <a
           href="https://www.adidas.com/us"
           target="_blank"

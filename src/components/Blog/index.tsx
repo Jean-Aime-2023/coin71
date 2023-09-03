@@ -21,7 +21,7 @@ function index() {
         data-aos="fade-up"
       >
         <div className="flex flex-row justify-between p-10">
-          <h1 className=" text-2xl font-bold">Blog</h1>
+          <h1 className=" text-2xl font-bold max-md:text-[1.2rem]">Blog</h1>
           <div className="flex flex-row gap-10">
             <img
               src={icon1}

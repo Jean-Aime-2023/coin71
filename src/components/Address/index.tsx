@@ -13,22 +13,22 @@ const index = () => {
     setOpen6(!open6);
   };
   return (
-    <div className=" flex flex-col gap-3 card2 rounded-2xl" data-aos="fade-up">
+    <div className="flex flex-col gap-3 card2 rounded-2xl" data-aos="fade-up">
       <div className="flex flex-row justify-between p-10">
-        <h1 className=" text-2xl font-bold">
-          Address and Contact <br /> Information Saerch
+        <h1 className=" text-2xl font-bold max-md:text-[1.2rem]">
+          Address and Contact <br /> Information Search
         </h1>
-        <div className="flex flex-row gap-10">
-          <img src={icon1} alt="" className="w-[100%] h-[80%] cursor-pointer" />
-          <img src={icon2} alt="" className="w-[100%] h-[80%] cursor-pointer" />
-          <img src={icon3} alt="" className="w-[100%] h-[80%] cursor-pointer" />
+        <div className="flex flex-row gap-10 max-md:gap-7">
+          <img src={icon1} alt="" className="w-[40%] h-[80%] cursor-pointer max-md:w-[20px] max-md:h-[20px]" />
+          <img src={icon2} alt="" className="w-[40%] h-[80%] cursor-pointer max-md:w-[20px] max-md:h-[20px]" />
+          <img src={icon3} alt="" className="w-[40%] h-[80%] cursor-pointer max-md:w-[20px] max-md:h-[20px]" />
           <img
             src={icon4}
             alt=""
             className={
               open6
-                ? "w-[100%] h-[80%] cursor-pointer"
-                : "w-[100%] h-[80%] cursor-pointer rotate-180"
+                ? "w-[100%] h-[80%] cursor-pointer max-md:w-[20px] max-md:h-[20px]"
+                : "w-[100%] h-[80%] cursor-pointer max-md:w-[20px] max-md:h-[20px] rotate-180"
             }
             onClick={handleCard6}
           />
