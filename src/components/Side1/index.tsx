@@ -74,7 +74,6 @@ const index = () => {
       
         <div
       className="flex flex-col gap-8 card1 p-10 rounded-2xl"
-      data-aos="fade-down"
         >
       <div className="flex flex-row justify-between">
         <h1 className=" text-2xl font-bold">Cashback</h1>
@@ -771,7 +770,6 @@ const index = () => {
 
         <div
         className=" flex flex-col gap-3 card1 rounded-2xl"
-        data-aos="fade-up"
       >
         <div className="flex flex-row justify-between p-10">
           <h1 className=" text-2xl font-bold">Blog</h1>
@@ -847,7 +845,6 @@ const index = () => {
 
        <div
         className=" flex flex-col card2 rounded-2xl p-10 gap-7"
-        data-aos="fade-up"
       >
         <div className="flex flex-row justify-between ">
           <h1 className=" text-2xl font-bold">Notizen</h1>

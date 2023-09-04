@@ -18,7 +18,6 @@ import Bookmarks from '../Bookmarks'
 import '../../App.css'
 // import RightArrow from '../../assets/rightArrow.png'
 // import LeftArrow from '../../assets/leftArrow.png'
-
 const index = () => {
 
 
@@ -27,12 +26,41 @@ const index = () => {
     setTogglState(index);
   };
 
+  const scrollLeft = () => {
+    const listElement = document.getElementById("list") as HTMLElement | null;
+    if (listElement) {
+      listElement.scrollLeft -= 400;
+    }
+  };
+  
+  const scrollRight = () => {
+    const listElement = document.getElementById("list") as HTMLElement | null;
+    if (listElement) {
+      listElement.scrollLeft += 400;
+    }
+  };
+  
+
 
   return (
     <div className="bg-gray-400 p-12 max-lg:px-[7rem] max-md:px-3 grid xl:grid-cols-3 gap-10 lg:grid-cols-3 overflow-x-hidden overflow-y-hidden max-shrink:text-xs">
       <div className="hidden max-lg:flex flex-col gap-3 overflow-x-hidden max-lg:mb-[9rem]">
+          
+        <div className="flex flex-row justify-between self-end w-[5rem]">
+          <div onClick={scrollLeft} className="bg-gray-700 p-2 rounded-full text-white cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-left" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" stroke-width="2"/>
+            </svg>
+          </div> 
+          <div onClick={scrollRight} className="bg-gray-700 p-2 rounded-full text-white cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-right" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+            </svg>
+          </div>
+        </div>  
+
         <div className="relative">
-          <ul className="flex overflow-x-auto srcolling gap-9 max-lg:text-2xl max-md:text-xl max-sm:text-lg">
+          <ul id="list" className="flex overflow-scroll scroll-smooth gap-9 scrollbar-hide max-lg:text-2xl max-md:text-2xl max-sm:text-2xl">
             <li className={togglState === 1 ? "activeAllTab" : ""} onClick={() => togglTab(1)} >
               All
             </li>
@@ -73,15 +101,9 @@ const index = () => {
               News
             </li>
           </ul>
-
-          {/* <div className="absolute top-0 bg-slate-700 p-2 rounded-full cursor-pointer">
-            <img src={LeftArrow} alt="LeftArrow" className="w-6" />
-          </div>
-
-          <div className="absolute top-0 right-0 bg-slate-700 p-2 rounded-full cursor-pointer">
-            <img src={RightArrow} alt="RightArrow" className="w-6"/>
-          </div> */}
         </div>
+
+
 
 
         <div className={togglState === 1 ? "content1 activeAllContent" : "content1"}>

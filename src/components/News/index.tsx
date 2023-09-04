@@ -14,7 +14,7 @@ const index = () => {
     setOpen12(!open12)
   }
   return (
-<div className=" flex flex-col gap-3 card1 rounded-3xl" data-aos="fade-up">
+<div className=" flex flex-col gap-3 card1 rounded-3xl">
         <div className="flex flex-row justify-between px-10 py-7">
           <h1 className=" text-2xl font-bold max-md:text-[1.2rem]">News</h1>
           <div className="flex flex-row gap-10">

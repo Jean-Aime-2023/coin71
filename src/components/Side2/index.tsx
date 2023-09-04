@@ -62,7 +62,7 @@ const index = () => {
     <div className="flex flex-col gap-6 flex-1">
 
       {/* Bookmarks */}
-      <div className=" flex flex-col gap-3 card1 rounded-2xl" data-aos="fade-down">
+      <div className=" flex flex-col gap-3 card1 rounded-2xl">
         <div className="flex flex-row justify-between p-10">
           <h1 className=" text-2xl font-bold max-res:text-lg">Bookmarks</h1>
           <div className="flex flex-row gap-10 max-res:gap-6">
@@ -107,7 +107,7 @@ const index = () => {
       </div>
 
       {/* Apps */}
-      <div className=" flex flex-col gap-3 card1 rounded-2xl" data-aos="fade-up">
+      <div className=" flex flex-col gap-3 card1 rounded-2xl">
         <div className="flex flex-row justify-between p-10">
           <h1 className=" text-2xl font-bold">Apps</h1>
           <div className="flex flex-row gap-10 max-res:gap-">
@@ -142,7 +142,7 @@ const index = () => {
       </div> 
       
       {/* Addreses */}
-      <div className=" flex flex-col gap-3 card2 rounded-2xl" data-aos="fade-up">
+      <div className=" flex flex-col gap-3 card2 rounded-2xl">
       <div className="flex flex-row justify-between p-10">
         <h1 className=" text-2xl font-bold max-md:text-lg">
           Address and Contact <br /> Information Saerch
@@ -204,7 +204,7 @@ const index = () => {
       </div>
       
       {/* search */}
-      <div className=" flex flex-col gap-3 card1 rounded-2xl" data-aos="fade-up">
+      <div className=" flex flex-col gap-3 card1 rounded-2xl">
         <div className="flex flex-row justify-between p-10">
           <h1 className=" text-2xl font-bold max-md:text-lg">Advanced Seacrh</h1>
           <div className="flex flex-row gap-8 max-res:gap-">
@@ -239,7 +239,7 @@ const index = () => {
       </div> 
       
       {/* Pages */}
-      <div className="flex flex-col gap-3 card1 rounded-2xl" data-aos="fade-up">
+      <div className="flex flex-col gap-3 card1 rounded-2xl">
         <div className="flex flex-row justify-between p-10">
           <h1 className=" text-2xl font-bold">Pages</h1>
           <div className="flex flex-row gap-10 max-res:gap-6">

@@ -10,7 +10,7 @@ const index = () => {
     setOpen10(!open10)
   }
   return (
-    <div className=" flex flex-col gap-3 card3 rounded-2xl" data-aos="fade-up">
+    <div className=" flex flex-col gap-3 card3 rounded-2xl">
         <div className="flex flex-row justify-between px-10 py-5">
           <h1 className=" text-2xl font-bold max-md:text-[1.2rem]">ToDo List</h1>
           <div className="flex flex-row gap-10">

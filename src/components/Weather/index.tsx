@@ -12,7 +12,7 @@ const index = () => {
     setOpen9(!open9)
   }
   return (
-<div className=" flex flex-col gap-3 card1 rounded-2xl" data-aos="fade-down">
+<div className=" flex flex-col gap-3 card1 rounded-2xl">
         <div className="flex flex-row justify-between p-10">
           <h1 className=" text-2xl font-bold">Weather</h1>
           <div className="flex flex-row gap-5">

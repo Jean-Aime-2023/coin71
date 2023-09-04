@@ -42,7 +42,7 @@ const index = () => {
     <div className="flex flex-col gap-6 flex-1 lg:grid max-lg:grid-cols-2 max:lg:w-[100vw]">
 
       {/* weather */}
-      <div className=" flex flex-col gap-3 card1 rounded-2xl" data-aos="fade-down">
+      <div className=" flex flex-col gap-3 card1 rounded-2xl">
         <div className="flex flex-row justify-between p-10">
           <h1 className=" text-2xl font-bold">Weather</h1>
           <div className="flex flex-row gap-5">
@@ -87,7 +87,7 @@ const index = () => {
       </div>
 
       {/* ToDo */}
-      <div className=" flex flex-col gap-3 card3 rounded-2xl" data-aos="fade-up">
+      <div className=" flex flex-col gap-3 card3 rounded-2xl">
         <div className="flex flex-row justify-between px-10 py-5">
           <h1 className=" text-2xl font-bold max-sm:text-base">ToDo List</h1>
           <div className="flex flex-row gap-5">
@@ -121,7 +121,7 @@ const index = () => {
       </div>
       
       {/* View */}
-      <div className=" flex flex-col gap-3 card1 rounded-3xl" data-aos="fade-up">
+      <div className=" flex flex-col gap-3 card1 rounded-3xl">
         <div className="flex flex-row justify-between px-10 py-7">
           <h1 className=" text-2xl font-bold flex flex-row max-text:text-lg max-text:flex-wrap">Trending view chart</h1>
           <div className="flex flex-row gap-7 max-res:gap-5">
@@ -138,7 +138,7 @@ const index = () => {
       </div>
       
       {/* News */}
-      <div className=" flex flex-col gap-3 card1 rounded-3xl" data-aos="fade-up">
+      <div className=" flex flex-col gap-3 card1 rounded-3xl">
         <div className="flex flex-row justify-between px-10 py-7">
           <h1 className=" text-2xl font-bold">News</h1>
           <div className="flex flex-row gap-10">

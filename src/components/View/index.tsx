@@ -11,9 +11,9 @@ const index = () => {
     setOpen11(!open11)
   }
   return (
-    <div className=" flex flex-col gap-3 card1 rounded-3xl" data-aos="fade-up">
+    <div className=" flex flex-col gap-3 card1 rounded-3xl">
         <div className="flex flex-row justify-between px-10 py-7">
-          <h1 className=" text-2xl font-bold flex flex-row max-text:text-lg max-lg:text-2xl max-text:flex-wrap max-md:texttext-2xl font-bold flex flex-row max-text:text-lg max-lg:text-2xl max-text:flex-wrap max-md:text-base">Trending view chart</h1>
+          <h1 className=" text-2xl font-bold flex flex-row max-text:text-lg max-lg:text-2xl max-text:flex-wrap max-md:texttext-2xl max-md:text-base">Trending view chart</h1>
           <div className="flex flex-row gap-10">
             <img src={icon1} alt="" className="w-[100%] h-[80%] cursor-pointer max-sm:w-[20px] max-sm:h-[20px]" />
             <img src={icon2} alt="" className="w-[100%] h-[80%] cursor-pointer max-sm:w-[20px] max-sm:h-[20px]" />

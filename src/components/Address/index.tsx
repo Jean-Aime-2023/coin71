@@ -13,7 +13,7 @@ const index = () => {
     setOpen6(!open6);
   };
   return (
-    <div className="flex flex-col gap-3 card2 rounded-2xl" data-aos="fade-up">
+    <div className="flex flex-col gap-3 card2 rounded-2xl">
       <div className="flex flex-row justify-between p-10">
         <h1 className=" text-2xl font-bold max-md:text-[1.2rem]">
           Address and Contact <br /> Information Search

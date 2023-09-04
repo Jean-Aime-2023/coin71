@@ -13,3 +13,7 @@ button{
 body{
     @apply overflow-x-hidden
 }
+
+::-webkit-scrollbar{
+    display: none;
+}

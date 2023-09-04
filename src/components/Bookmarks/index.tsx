@@ -16,7 +16,7 @@ const index = () => {
     setOpen4(!open4)
   }
   return (
-    <div className=" flex flex-col gap-3 card1 rounded-2xl" data-aos="fade-down">
+    <div className=" flex flex-col gap-3 card1 rounded-2xl">
         <div className="flex flex-row justify-between p-10">
           <h1 className=" text-2xl font-bold max-md:text-[1.2rem]">Bookmarks</h1>
           <div className="flex flex-row gap-10">

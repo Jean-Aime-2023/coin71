@@ -20,7 +20,7 @@ const MyModal = ({ visible, onClose }: ModalToggling) => {
       id="container"
       className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center z-50"
     >
-      <div data-aos="fade-out" className="bg-white p-20 rounded-3xl flex flex-col gap-3 h-[90%] w-[90%] overflow-y-scroll overflow-x-hidden max-md:p-10 max-md:text-xs">
+      <div className="bg-white p-20 rounded-3xl flex flex-col gap-3 h-[90%] w-[90%] overflow-y-scroll overflow-x-hidden max-md:p-10 max-md:text-xs">
         <img src={logo} alt="" className="w-[10%] max-lg:w-[30%]" />
         <div className="flex flex-row justify-between">
           <div className="flex flex-col">

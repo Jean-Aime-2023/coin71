@@ -47,7 +47,6 @@ const index = () => {
   return (
     <div
     className="flex flex-col gap-8 card1 p-10 rounded-2xl"
-    data-aos="fade-down"
   >
     <div className="flex flex-row justify-between">
       <h1 className=" text-2xl font-bold max-md:text-[1.2rem]">Cashback</h1>
